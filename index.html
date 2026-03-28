@@ -1,5 +1,5 @@
 <!--
-  index.html | Versão: 1.0.0 | Atualizado: 2026-03-28 | Home - Gás P20 Empilhadeira Campo Grande
+  index.html | Versão: 1.1.0 | Atualizado: 2026-03-28 | Cores industriais + imagem cilindro P20
 -->
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -33,15 +33,17 @@
     :root {
       --primaria: #1a1a2e;
       --primaria-clara: #16213e;
-      --secundaria: #e94560;
+      --secundaria: #f5a623;
+      --secundaria-hover: #e09000;
       --accent: #0f3460;
       --verde-wpp: #25D366;
-      --amarelo: #f5a623;
-      --cinza-bg: #f8f9fa;
-      --cinza-texto: #2d3436;
-      --cinza-sub: #636e72;
+      --cinza-metal: #7f8c8d;
+      --cinza-claro: #bdc3c7;
+      --cinza-bg: #f4f6f7;
+      --cinza-texto: #2c3e50;
+      --cinza-sub: #5d6d7e;
       --branco: #ffffff;
-      --borda: #dfe6e9;
+      --borda: #d5dbdb;
       --radius: 12px;
       --radius-btn: 8px;
       --shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -157,7 +159,7 @@
     }
     
     .btn-header:hover {
-      background: #d63d56;
+      background: var(--secundaria-hover);
       transform: translateY(-2px);
     }
     
@@ -193,14 +195,14 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(233, 69, 96, 0.2);
+      background: rgba(245, 166, 35, 0.15);
       color: var(--secundaria);
       padding: 8px 16px;
       border-radius: 50px;
       font-size: 0.85rem;
       font-weight: 600;
       margin-bottom: 20px;
-      border: 1px solid rgba(233, 69, 96, 0.3);
+      border: 1px solid rgba(245, 166, 35, 0.3);
     }
     
     .hero h1 {
@@ -244,9 +246,9 @@
     }
     
     .btn-primary:hover {
-      background: #d63d56;
+      background: var(--secundaria-hover);
       transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(233, 69, 96, 0.4);
+      box-shadow: 0 10px 30px rgba(245, 166, 35, 0.4);
     }
     
     .btn-secondary {
@@ -301,25 +303,9 @@
       align-items: center;
     }
     
-    .hero-image-placeholder {
-      width: 100%;
-      max-width: 450px;
-      aspect-ratio: 4/3;
-      background: rgba(255,255,255,0.1);
-      border-radius: var(--radius);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border: 2px dashed rgba(255,255,255,0.2);
-      color: rgba(255,255,255,0.5);
-    }
-    
-    .hero-image-placeholder svg {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 15px;
-      opacity: 0.5;
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
     }
     
     /* BENEFÍCIOS */
@@ -770,7 +756,12 @@
       }
       
       .hero-image {
-        display: none;
+        order: -1;
+        margin-bottom: 30px;
+      }
+      
+      .hero-image img {
+        max-height: 250px;
       }
       
       .beneficios-grid {
@@ -1015,10 +1006,7 @@
           </div>
         </div>
         <div class="hero-image">
-          <div class="hero-image-placeholder">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
-            <span>Imagem: Empilhadeira GLP</span>
-          </div>
+          <img src="/images/cilindro-p20.webp" alt="Cilindro P20 para empilhadeira GLP" width="300" height="400" loading="eager" style="max-height: 400px; width: auto; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));">
         </div>
       </div>
     </div>

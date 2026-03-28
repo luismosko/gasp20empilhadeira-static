@@ -1,5 +1,5 @@
 <!--
-  index.html | Versão: 1.1.0 | Atualizado: 2026-03-28 | Cores industriais + imagem cilindro P20
+  index.html | Versão: 1.2.0 | Atualizado: 2026-03-28 | Logo e cilindro com fundo transparente
 -->
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -98,35 +98,11 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 12px;
     }
     
-    .logo-icon {
-      width: 45px;
-      height: 45px;
-      background: var(--secundaria);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-    }
-    
-    .logo-text {
-      color: var(--branco);
-    }
-    
-    .logo-text strong {
-      font-size: 1.3rem;
-      font-weight: 800;
-      display: block;
-    }
-    
-    .logo-text span {
-      font-size: 0.75rem;
-      color: var(--secundaria);
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .logo-img {
+      height: 50px;
+      width: auto;
     }
     
     .header-contact {
@@ -951,11 +927,7 @@
     <div class="container">
       <div class="header-inner">
         <a href="/" class="logo">
-          <div class="logo-icon">⛽</div>
-          <div class="logo-text">
-            <strong>Gás P20</strong>
-            <span>Empilhadeira</span>
-          </div>
+          <img src="/images/logo.webp" alt="Gás P20 Empilhadeira" class="logo-img">
         </a>
         <div class="header-contact">
           <a href="tel:+5567991310665" class="header-phone">

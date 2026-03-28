@@ -1,5 +1,5 @@
 <!--
-  index.html | Versão: 1.2.0 | Atualizado: 2026-03-28 | Logo e cilindro com fundo transparente
+  index.html | Versão: 1.2.1 | Atualizado: 2026-03-28 | Logo maior + cilindro fundo transparente corrigido
 -->
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -82,7 +82,7 @@
     /* HEADER */
     .header {
       background: var(--primaria);
-      padding: 15px 0;
+      padding: 12px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -101,8 +101,14 @@
     }
     
     .logo-img {
-      height: 50px;
+      height: 70px;
       width: auto;
+    }
+    
+    @media (min-width: 768px) {
+      .logo-img {
+        height: 90px;
+      }
     }
     
     .header-contact {

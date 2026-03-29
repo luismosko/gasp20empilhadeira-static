@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--
+  seguranca-normas-anp/index.html | Versão: 1.0.0 | Atualizado: 2026-03-29 | Segurança e normas ANP
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segurança e Normas ANP para GLP em Empilhadeiras — Guia Completo</title>
+  <meta name="description" content="Conheça as normas da ANP para uso de GLP em empilhadeiras. Regras de segurança, armazenamento e operação com cilindros P20.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gasp20empilhadeira.com.br/seguranca-normas-anp/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--azul-hero:#0891b2;--azul-claro:#06b6d4;--azul-escuro:#0e7490;--azul-bg:#ecfeff;--laranja:#f97316;--laranja-hover:#ea580c;--verde:#10b981;--vermelho:#ef4444;--verde-wpp:#25D366;--cinza-bg:#f8fafc;--cinza-texto:#1e293b;--cinza-sub:#64748b;--branco:#ffffff;--borda:#e2e8f0;--radius:16px;--radius-btn:12px}
+    body{font-family:'Inter',sans-serif;color:var(--cinza-texto);line-height:1.7;background:var(--branco)}
+    a{text-decoration:none;color:inherit}img{max-width:100%;height:auto}
+    header{background:var(--branco);padding:16px 24px;border-bottom:1px solid var(--borda);position:sticky;top:0;z-index:100}
+    .header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .logo img{height:50px}
+    nav{display:flex;gap:8px}nav a{padding:10px 18px;font-size:14px;font-weight:500;color:var(--cinza-sub);border-radius:var(--radius-btn);transition:0.2s}nav a:hover{background:var(--azul-bg)}
+    .nav-cta{background:var(--laranja)!important;color:white!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:8px;cursor:pointer}.hamburger span{width:24px;height:2px;background:var(--cinza-texto)}
+    .breadcrumb{max-width:1200px;margin:0 auto;padding:16px 24px;font-size:13px;color:var(--cinza-sub)}.breadcrumb a{color:var(--azul-hero)}
+    .page-header{padding:60px 24px;background:linear-gradient(180deg,var(--azul-bg) 0%,var(--branco) 100%);text-align:center}
+    .page-header h1{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;margin-bottom:16px}.page-header h1 span{color:var(--azul-hero)}
+    .page-header .lead{font-size:18px;color:var(--cinza-sub);max-width:700px;margin:0 auto}
+    .content-section{padding:60px 24px}.container{max-width:900px;margin:0 auto}
+    .content-text h2{font-size:1.5rem;font-weight:700;margin:40px 0 16px}.content-text h3{font-size:1.2rem;font-weight:600;margin:32px 0 12px}
+    .content-text p{margin-bottom:16px}.content-text ul{margin:16px 0 24px 24px}.content-text li{margin-bottom:8px}.content-text strong{color:var(--azul-escuro)}
+    .safety-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin:32px 0}
+    .safety-card{border-radius:var(--radius);padding:28px}
+    .safety-card.do{background:#ecfdf5;border:1px solid #a7f3d0}
+    .safety-card.dont{background:#fef2f2;border:1px solid #fecaca}
+    .safety-card h4{margin-bottom:16px;display:flex;align-items:center;gap:10px;font-size:1.1rem}
+    .safety-card.do h4{color:var(--verde)}
+    .safety-card.dont h4{color:var(--vermelho)}
+    .safety-card ul{margin:0;padding-left:20px}
+    .safety-card li{margin-bottom:8px;font-size:14px}
+    .regulation-box{background:var(--azul-bg);border-radius:var(--radius);padding:28px;margin:32px 0;border-left:4px solid var(--azul-hero)}
+    .regulation-box h4{color:var(--azul-escuro);margin-bottom:12px}
+    .regulation-box p{margin:0;font-size:14px}
+    .warning-box{background:#fef3c7;border:1px solid #fcd34d;border-radius:var(--radius);padding:24px;margin:32px 0}
+    .warning-box h4{color:#92400e;margin-bottom:8px}
+    .warning-box p{color:#92400e;margin:0;font-size:14px}
+    .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--laranja);color:white;padding:16px 32px;border-radius:var(--radius-btn);font-weight:600;transition:0.3s}
+    .btn-primary:hover{background:var(--laranja-hover)}
+    .cta-section{background:linear-gradient(135deg,var(--azul-hero) 0%,var(--azul-escuro) 100%);padding:60px 24px;text-align:center}
+    .cta-section h2{color:white;margin-bottom:12px}.cta-section p{color:rgba(255,255,255,0.9);margin-bottom:24px}
+    .cta-section .btn-primary{background:white;color:var(--azul-hero)}
+    footer{background:var(--cinza-texto);color:white;padding:40px 24px}
+    .footer-inner{max-width:1200px;margin:0 auto;text-align:center;font-size:14px;color:rgba(255,255,255,0.7)}
+    .float-wpp{position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:var(--verde-wpp);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:99}
+    .float-wpp svg{width:32px;height:32px;fill:white}
+    @media(max-width:968px){nav{display:none}.hamburger{display:flex}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo"><img src="/images/logo.png" alt="Gás P20 Empilhadeira"></a>
+    <nav>
+      <a href="/">Início</a>
+      <a href="/gas-p20-empilhadeira/">Gás P20</a>
+      <a href="/como-funciona/">Como Funciona</a>
+      <a href="/contato/" class="nav-cta">Contato</a>
+    </nav>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="/">Início</a> → <a href="/como-funciona/">Como Funciona</a> → <strong>Segurança e Normas ANP</strong>
+</div>
+
+<section class="page-header">
+  <h1>Segurança e <span>Normas ANP</span></h1>
+  <p class="lead">Conheça as regulamentações e boas práticas de segurança para uso de GLP em empilhadeiras.</p>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="content-text">
+      <h2>Regulamentação da ANP</h2>
+      <p>A <strong>Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP)</strong> é o órgão responsável por regular o uso de GLP no Brasil. O GLP é o único gás combustível autorizado para uso em veículos automotores, incluindo empilhadeiras.</p>
+      
+      <div class="regulation-box">
+        <h4>📋 Resolução ANP nº 18/2004</h4>
+        <p>Estabelece as especificações do GLP comercializado no Brasil e as condições para sua distribuição e revenda, incluindo para uso automotivo em empilhadeiras industriais.</p>
+      </div>
+      
+      <h2>Boas Práticas de Segurança</h2>
+    </div>
+    
+    <div class="safety-grid">
+      <div class="safety-card do">
+        <h4>✅ Faça</h4>
+        <ul>
+          <li>Verifique a validade do cilindro antes de usar</li>
+          <li>Faça a troca em área ventilada</li>
+          <li>Use EPI adequado (luvas, óculos)</li>
+          <li>Verifique vazamentos com água e sabão</li>
+          <li>Mantenha extintores por perto</li>
+          <li>Treine os operadores adequadamente</li>
+          <li>Armazene cilindros em local ventilado</li>
+          <li>Mantenha o motor regulado</li>
+        </ul>
+      </div>
+      
+      <div class="safety-card dont">
+        <h4>❌ Não Faça</h4>
+        <ul>
+          <li>Não fume perto de cilindros</li>
+          <li>Não armazene cilindros ao sol</li>
+          <li>Não use cilindros danificados</li>
+          <li>Não force conexões que não encaixam</li>
+          <li>Não opere com vazamentos</li>
+          <li>Não abasteça com motor ligado</li>
+          <li>Não armazene perto de fontes de calor</li>
+          <li>Não use em ambientes sem ventilação</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="content-text">
+      <h2>Normas de Segurança para Operação</h2>
+      
+      <h3>NR-11 — Transporte e Movimentação de Cargas</h3>
+      <p>A Norma Regulamentadora 11 do Ministério do Trabalho estabelece requisitos para operação segura de empilhadeiras, incluindo:</p>
+      <ul>
+        <li>Operador deve ser habilitado e treinado</li>
+        <li>Equipamento deve passar por inspeção periódica</li>
+        <li>Manutenção preventiva obrigatória</li>
+        <li>Uso de sinalização em áreas de operação</li>
+        <li>Velocidade máxima de circulação</li>
+      </ul>
+      
+      <h3>ABNT NBR 15514 — Armazenamento de GLP</h3>
+      <p>Define requisitos para armazenamento de cilindros de GLP:</p>
+      <ul>
+        <li>Área coberta e ventilada</li>
+        <li>Piso impermeável e nivelado</li>
+        <li>Distância mínima de fontes de calor</li>
+        <li>Sinalização de "Inflamável"</li>
+        <li>Acesso restrito a pessoas autorizadas</li>
+      </ul>
+      
+      <div class="warning-box">
+        <h4>⚠️ Em Caso de Vazamento</h4>
+        <p>1. Não acione interruptores ou equipamentos elétricos. 2. Evacue a área imediatamente. 3. Ventile o ambiente. 4. Feche a válvula do cilindro se possível. 5. Chame os bombeiros se necessário.</p>
+      </div>
+      
+      <h2>Validade dos Cilindros</h2>
+      <p>Cilindros de GLP têm <strong>prazo de requalificação</strong> de 10 anos a partir da data de fabricação. Após esse período, devem ser inspecionados e requalificados por empresa credenciada pelo INMETRO.</p>
+      <p>A data de fabricação e requalificação está gravada no corpo do cilindro. <strong>Nunca use cilindros vencidos</strong> — podem apresentar falhas estruturais.</p>
+      
+      <h2>Treinamento de Operadores</h2>
+      <p>Todo operador de empilhadeira a GLP deve receber treinamento que inclua:</p>
+      <ul>
+        <li>Procedimento seguro de troca de cilindro</li>
+        <li>Identificação de vazamentos</li>
+        <li>Uso de extintores de incêndio</li>
+        <li>Procedimentos de emergência</li>
+        <li>Manutenção básica do sistema de gás</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Cilindros Sempre Dentro da Validade</h2>
+  <p>Fornecemos cilindros P20 certificados e dentro do prazo de validade</p>
+  <a href="https://wa.me/5567991310665?text=Ol%C3%A1!%20Preciso%20de%20cilindros%20P20%20certificados." target="_blank" class="btn-primary">
+    Solicitar Cotação
+  </a>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Gás P20 Empilhadeira — Campo Grande/MS — (67) 99131-0665</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/5567991310665" target="_blank" class="float-wpp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+</a>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://gasp20empilhadeira.com.br/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  
+  <!-- CLUSTER: PRODUTO -->
+  <url><loc>https://gasp20empilhadeira.com.br/gas-p20-empilhadeira/</loc><priority>0.9</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/cilindro-p20/</loc><priority>0.8</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/cilindro-p45/</loc><priority>0.8</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/recarga-gas-p20/</loc><priority>0.8</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/diferenca-p13-p20-p45/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/o-que-e-gas-p20/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/especificacoes-tecnicas/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/glp-para-empilhadeira/</loc><priority>0.8</priority></url>
+  
+  <!-- CLUSTER: PREÇO -->
+  <url><loc>https://gasp20empilhadeira.com.br/preco-gas-p20/</loc><priority>0.9</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/orcamento-empresas/</loc><priority>0.8</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/contrato-fornecimento/</loc><priority>0.8</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/quanto-custa-abastecer/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/custo-por-hora-empilhadeira/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/economia-glp-empilhadeira/</loc><priority>0.7</priority></url>
+  
+  <!-- CLUSTER: COMPARATIVOS -->
+  <url><loc>https://gasp20empilhadeira.com.br/comparativos/</loc><priority>0.8</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/empilhadeira-glp-vs-diesel/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/empilhadeira-glp-vs-eletrica/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/p20-vs-p45-qual-melhor/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/glp-vs-gasolina-empilhadeira/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/vantagens-glp-empilhadeira/</loc><priority>0.7</priority></url>
+  
+  <!-- CLUSTER: SEGMENTOS -->
+  <url><loc>https://gasp20empilhadeira.com.br/segmentos/</loc><priority>0.8</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/segmentos/industrias/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/segmentos/centros-distribuicao/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/segmentos/armazens/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/segmentos/atacadistas/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/segmentos/supermercados/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/segmentos/bebidas/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/segmentos/alimentos/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/segmentos/construcao/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/segmentos/logistica/</loc><priority>0.7</priority></url>
+  
+  <!-- CLUSTER: COMO FUNCIONA -->
+  <url><loc>https://gasp20empilhadeira.com.br/como-funciona/</loc><priority>0.8</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/como-trocar-cilindro/</loc><priority>0.8</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/consumo-autonomia/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/quantas-horas-dura-p20/</loc><priority>0.8</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/manutencao-empilhadeira-glp/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/instalacao-kit-glp/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/seguranca-normas-anp/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/armazenamento-cilindros/</loc><priority>0.7</priority></url>
+  
+  <!-- CLUSTER: BLOG -->
+  <url><loc>https://gasp20empilhadeira.com.br/blog/</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://gasp20empilhadeira.com.br/blog/vale-pena-converter-glp/</loc><priority>0.6</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/blog/reduzir-custos-frota/</loc><priority>0.6</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/blog/empilhadeira-nao-liga/</loc><priority>0.6</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/blog/como-calcular-consumo/</loc><priority>0.6</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/blog/nr-11-empilhadeiras/</loc><priority>0.6</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/blog/glp-ambiente-fechado/</loc><priority>0.6</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/blog/dicas-operador/</loc><priority>0.6</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/blog/tipos-empilhadeira/</loc><priority>0.6</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/blog/capacidade-carga/</loc><priority>0.6</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/blog/empilhadeira-usada-glp/</loc><priority>0.6</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/blog/historia-empilhadeira/</loc><priority>0.6</priority></url>
+  
+  <!-- PÁGINAS DE SUPORTE -->
+  <url><loc>https://gasp20empilhadeira.com.br/contato/</loc><priority>0.9</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/sobre/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/faq/</loc><priority>0.7</priority></url>
+  <url><loc>https://gasp20empilhadeira.com.br/area-atendimento/</loc><priority>0.7</priority></url>
+</urlset>

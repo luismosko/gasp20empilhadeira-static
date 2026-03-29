@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--
+  comparativos/index.html | Versão: 1.0.0 | Atualizado: 2026-03-29 | Hub comparativos empilhadeiras
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparativos de Empilhadeiras — GLP vs Diesel vs Elétrica | Guia Completo</title>
+  <meta name="description" content="Compare empilhadeiras a GLP, diesel e elétrica. Custos, vantagens, desvantagens e qual escolher para sua operação. Guia completo.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gasp20empilhadeira.com.br/comparativos/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--azul-hero:#0891b2;--azul-claro:#06b6d4;--azul-escuro:#0e7490;--azul-bg:#ecfeff;--laranja:#f97316;--laranja-hover:#ea580c;--verde-wpp:#25D366;--cinza-bg:#f8fafc;--cinza-texto:#1e293b;--cinza-sub:#64748b;--branco:#ffffff;--borda:#e2e8f0;--radius:16px;--radius-btn:12px}
+    body{font-family:'Inter',sans-serif;color:var(--cinza-texto);line-height:1.7;background:var(--branco)}
+    a{text-decoration:none;color:inherit}img{max-width:100%;height:auto}
+    header{background:var(--branco);padding:16px 24px;border-bottom:1px solid var(--borda);position:sticky;top:0;z-index:100}
+    .header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .logo img{height:50px}
+    nav{display:flex;gap:8px}nav a{padding:10px 18px;font-size:14px;font-weight:500;color:var(--cinza-sub);border-radius:var(--radius-btn);transition:0.2s}nav a:hover{background:var(--azul-bg)}
+    .nav-cta{background:var(--laranja)!important;color:white!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:8px;cursor:pointer}.hamburger span{width:24px;height:2px;background:var(--cinza-texto)}
+    .breadcrumb{max-width:1200px;margin:0 auto;padding:16px 24px;font-size:13px;color:var(--cinza-sub)}.breadcrumb a{color:var(--azul-hero)}
+    .page-header{padding:60px 24px;background:linear-gradient(180deg,var(--azul-bg) 0%,var(--branco) 100%);text-align:center}
+    .page-header h1{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;margin-bottom:16px}.page-header h1 span{color:var(--azul-hero)}
+    .page-header .lead{font-size:18px;color:var(--cinza-sub);max-width:700px;margin:0 auto}
+    .content-section{padding:60px 24px}.container{max-width:1000px;margin:0 auto}
+    .content-text h2{font-size:1.5rem;font-weight:700;margin:40px 0 16px}.content-text p{margin-bottom:16px}
+    .compare-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin:40px 0}
+    .compare-card{background:var(--branco);border:2px solid var(--borda);border-radius:var(--radius);padding:32px;transition:0.2s}
+    .compare-card:hover{border-color:var(--azul-hero);transform:translateY(-4px)}
+    .compare-card.featured{border-color:var(--azul-hero);background:var(--azul-bg)}
+    .compare-card h3{font-size:1.3rem;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+    .compare-card .tag{font-size:11px;background:var(--laranja);color:white;padding:2px 8px;border-radius:4px}
+    .compare-card p{font-size:14px;color:var(--cinza-sub);margin-bottom:20px}
+    .compare-card a{display:inline-flex;align-items:center;gap:8px;color:var(--azul-hero);font-weight:600;font-size:14px}
+    .compare-card a:hover{text-decoration:underline}
+    .quick-table{width:100%;border-collapse:collapse;margin:40px 0;background:var(--branco);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+    .quick-table th,.quick-table td{padding:16px;text-align:center;border-bottom:1px solid var(--borda)}
+    .quick-table th{background:var(--azul-bg);font-weight:600;color:var(--azul-escuro)}
+    .quick-table td:first-child{text-align:left;font-weight:500}
+    .quick-table .winner{color:var(--azul-hero);font-weight:700}
+    .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--laranja);color:white;padding:16px 32px;border-radius:var(--radius-btn);font-weight:600;transition:0.3s}
+    .btn-primary:hover{background:var(--laranja-hover)}.btn-primary svg{width:20px;height:20px;fill:currentColor}
+    .cta-section{background:linear-gradient(135deg,var(--azul-hero) 0%,var(--azul-escuro) 100%);padding:60px 24px;text-align:center}
+    .cta-section h2{color:white;margin-bottom:12px}.cta-section p{color:rgba(255,255,255,0.9);margin-bottom:24px}
+    .cta-section .btn-primary{background:white;color:var(--azul-hero)}
+    footer{background:var(--cinza-texto);color:white;padding:40px 24px}
+    .footer-inner{max-width:1200px;margin:0 auto;text-align:center;font-size:14px;color:rgba(255,255,255,0.7)}
+    .float-wpp{position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:var(--verde-wpp);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:99}
+    .float-wpp svg{width:32px;height:32px;fill:white}
+    @media(max-width:968px){nav{display:none}.hamburger{display:flex}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo"><img src="/images/logo.png" alt="Gás P20 Empilhadeira"></a>
+    <nav>
+      <a href="/">Início</a>
+      <a href="/gas-p20-empilhadeira/">Gás P20</a>
+      <a href="/preco-gas-p20/">Preços</a>
+      <a href="/contato/" class="nav-cta">Contato</a>
+    </nav>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="/">Início</a> → <strong>Comparativos</strong>
+</div>
+
+<section class="page-header">
+  <h1>Comparativos de <span>Empilhadeiras</span></h1>
+  <p class="lead">Guias completos para ajudar você a escolher o melhor tipo de empilhadeira e combustível para sua operação.</p>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="content-text">
+      <h2>Escolha o Comparativo</h2>
+      <p>Cada operação tem necessidades diferentes. Compare as opções e descubra qual é a melhor para sua empresa:</p>
+    </div>
+    
+    <div class="compare-cards">
+      <a href="/empilhadeira-glp-vs-diesel/" class="compare-card featured">
+        <h3>⛽ GLP vs Diesel <span class="tag">Popular</span></h3>
+        <p>Comparativo completo entre empilhadeiras a gás e diesel. Custos, manutenção, ambiente de uso e qual escolher.</p>
+        <span>Ler comparativo →</span>
+      </a>
+      
+      <a href="/empilhadeira-glp-vs-eletrica/" class="compare-card featured">
+        <h3>🔋 GLP vs Elétrica <span class="tag">Popular</span></h3>
+        <p>GLP ou bateria? Veja as vantagens e desvantagens de cada tipo para operações indoor e outdoor.</p>
+        <span>Ler comparativo →</span>
+      </a>
+      
+      <a href="/p20-vs-p45-qual-melhor/" class="compare-card">
+        <h3>📦 P20 vs P45</h3>
+        <p>Qual cilindro usar? Compare autonomia, peso e custo-benefício do P20 e P45 para sua frota.</p>
+        <span>Ler comparativo →</span>
+      </a>
+      
+      <a href="/glp-vs-gasolina-empilhadeira/" class="compare-card">
+        <h3>🔥 GLP vs Gasolina</h3>
+        <p>Empilhadeira pode usar gasolina? Entenda as diferenças e por que o GLP é a escolha certa.</p>
+        <span>Ler comparativo →</span>
+      </a>
+      
+      <a href="/vantagens-glp-empilhadeira/" class="compare-card">
+        <h3>✅ Vantagens do GLP</h3>
+        <p>Resumo de todas as vantagens de operar empilhadeiras a GLP: economia, segurança e praticidade.</p>
+        <span>Ler mais →</span>
+      </a>
+    </div>
+    
+    <div class="content-text">
+      <h2>Resumo Rápido</h2>
+      <p>Veja uma comparação geral entre os principais tipos de empilhadeira:</p>
+    </div>
+    
+    <table class="quick-table">
+      <tr>
+        <th>Critério</th>
+        <th>GLP</th>
+        <th>Diesel</th>
+        <th>Elétrica</th>
+      </tr>
+      <tr>
+        <td>Custo de combustível</td>
+        <td class="winner">★★★★☆</td>
+        <td>★★☆☆☆</td>
+        <td>★★★★★</td>
+      </tr>
+      <tr>
+        <td>Uso interno</td>
+        <td class="winner">★★★★★</td>
+        <td>★☆☆☆☆</td>
+        <td>★★★★★</td>
+      </tr>
+      <tr>
+        <td>Potência</td>
+        <td>★★★★☆</td>
+        <td class="winner">★★★★★</td>
+        <td>★★★☆☆</td>
+      </tr>
+      <tr>
+        <td>Tempo de abastecimento</td>
+        <td class="winner">★★★★★</td>
+        <td>★★★★☆</td>
+        <td>★☆☆☆☆</td>
+      </tr>
+      <tr>
+        <td>Custo de manutenção</td>
+        <td>★★★★☆</td>
+        <td>★★☆☆☆</td>
+        <td class="winner">★★★★★</td>
+      </tr>
+      <tr>
+        <td>Investimento inicial</td>
+        <td class="winner">★★★★☆</td>
+        <td>★★★★☆</td>
+        <td>★★☆☆☆</td>
+      </tr>
+    </table>
+    
+    <div class="content-text">
+      <h2>Qual Escolher?</h2>
+      <p><strong>Empilhadeira a GLP</strong> é a escolha ideal quando você precisa de:</p>
+      <ul>
+        <li>Operação em ambientes internos e externos</li>
+        <li>Potência constante durante todo o expediente</li>
+        <li>Troca rápida de combustível (sem esperar recarga)</li>
+        <li>Investimento inicial moderado</li>
+        <li>Flexibilidade operacional</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Precisa de Ajuda para Escolher?</h2>
+  <p>Nossos especialistas podem orientar a melhor solução para sua operação</p>
+  <a href="https://wa.me/5567991310665?text=Ol%C3%A1!%20Preciso%20de%20ajuda%20para%20escolher%20o%20tipo%20de%20empilhadeira." target="_blank" class="btn-primary">
+    Falar com Especialista
+  </a>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Gás P20 Empilhadeira — Campo Grande/MS — (67) 99131-0665</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/5567991310665" target="_blank" class="float-wpp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+</a>
+
+</body>
+</html>

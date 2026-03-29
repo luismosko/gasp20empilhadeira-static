@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  index.html | Versão: 2.1.0 | Atualizado: 2026-03-29 | Nova seção com imagem empilhadeira
+  index.html | Versão: 2.2.0 | Atualizado: 2026-03-29 | Imagens locais + empilhadeira maior + fundos transparentes
 -->
 <html lang="pt-BR">
 <head>
@@ -311,16 +311,15 @@
     
     .hero-img-wrapper {
       position: relative;
-      background: linear-gradient(135deg, var(--azul-hero) 0%, var(--azul-claro) 100%);
+      background: transparent;
       border-radius: 24px;
       padding: 40px;
-      box-shadow: var(--shadow-lg);
     }
     
     .hero-img-wrapper img {
-      height: 320px;
+      height: 380px;
       width: auto;
-      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2));
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
     }
     
     /* ══════════════════════════════════════════════════════════════
@@ -346,7 +345,7 @@
     
     .sobre-img img {
       width: 100%;
-      max-width: 500px;
+      max-width: 600px;
       filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
     }
     
@@ -1007,7 +1006,7 @@
     
     <div class="hero-visual">
       <div class="hero-img-wrapper">
-        <img src="https://gasdecozinhacampogrande.com.br/botijao-p20.png" alt="Cilindro P20 para empilhadeira GLP Campo Grande" loading="eager">
+        <img src="/images/cilindro-p20.webp" alt="Cilindro P20 para empilhadeira GLP Campo Grande" loading="eager">
       </div>
     </div>
   </div>
@@ -1119,7 +1118,7 @@
   
   <div class="produtos-grid">
     <div class="produto-card destaque">
-      <img src="https://gasdecozinhacampogrande.com.br/botijao-p20.png" alt="Cilindro P20 GLP para empilhadeira" class="produto-img">
+      <img src="/images/cilindro-p20.webp" alt="Cilindro P20 GLP para empilhadeira" class="produto-img">
       <h3>Gás P20 Industrial</h3>
       <p class="desc">Ideal para empilhadeiras a GLP. 20kg de gás com maior autonomia.</p>
       <div class="produto-specs">
@@ -1133,7 +1132,7 @@
     </div>
     
     <div class="produto-card">
-      <img src="https://gasdecozinhacampogrande.com.br/botijao-p45.jpg" alt="Cilindro P45 GLP industrial" class="produto-img">
+      <img src="/images/cilindro-p45.webp" alt="Cilindro P45 GLP industrial" class="produto-img">
       <h3>Gás P45 Industrial</h3>
       <p class="desc">Para grandes demandas. 45kg de gás para indústrias e frotistas.</p>
       <div class="produto-specs">

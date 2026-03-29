@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  index.html | Versão: 2.4.0 | Atualizado: 2026-03-29 | Fix: substituída imagem quebrada por cilindro P20
+  index.html | Versão: 2.5.0 | Atualizado: 2026-03-29 | Nova imagem empilhadeira amarela na seção sobre
 -->
 <html lang="pt-BR">
 <head>
@@ -343,16 +343,18 @@
       position: relative;
       background: linear-gradient(135deg, var(--azul-bg) 0%, #e0f7fa 100%);
       border-radius: 24px;
-      padding: 60px 40px;
+      padding: 32px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
     
     .sobre-img img {
-      max-height: 350px;
+      max-width: 100%;
+      max-height: 400px;
       width: auto;
-      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+      height: auto;
+      filter: drop-shadow(0 15px 35px rgba(0,0,0,0.12));
     }
     
     .sobre-content h2 {
@@ -1022,7 +1024,7 @@
 <section class="sobre">
   <div class="sobre-inner">
     <div class="sobre-img">
-      <img src="/images/cilindro-p20.webp" alt="Cilindro P20 de GLP para empilhadeiras" loading="lazy">
+      <img src="/images/empilhadeira.jpg" alt="Empilhadeira a GLP com cilindro P20" loading="lazy">
     </div>
     
     <div class="sobre-content">

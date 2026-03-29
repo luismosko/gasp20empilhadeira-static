@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--
+  blog/index.html | Versão: 1.0.0 | Atualizado: 2026-03-29 | Hub do blog
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Dicas e Guias sobre Empilhadeiras a GLP</title>
+  <meta name="description" content="Artigos, dicas e guias sobre empilhadeiras a GLP. Aprenda sobre manutenção, economia, segurança e operação.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gasp20empilhadeira.com.br/blog/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--azul-hero:#0891b2;--azul-claro:#06b6d4;--azul-escuro:#0e7490;--azul-bg:#ecfeff;--laranja:#f97316;--laranja-hover:#ea580c;--verde-wpp:#25D366;--cinza-bg:#f8fafc;--cinza-texto:#1e293b;--cinza-sub:#64748b;--branco:#ffffff;--borda:#e2e8f0;--radius:16px;--radius-btn:12px}
+    body{font-family:'Inter',sans-serif;color:var(--cinza-texto);line-height:1.7;background:var(--branco)}
+    a{text-decoration:none;color:inherit}img{max-width:100%;height:auto}
+    header{background:var(--branco);padding:16px 24px;border-bottom:1px solid var(--borda);position:sticky;top:0;z-index:100}
+    .header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .logo img{height:50px}
+    nav{display:flex;gap:8px}nav a{padding:10px 18px;font-size:14px;font-weight:500;color:var(--cinza-sub);border-radius:var(--radius-btn);transition:0.2s}nav a:hover{background:var(--azul-bg)}
+    .nav-cta{background:var(--laranja)!important;color:white!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:8px;cursor:pointer}.hamburger span{width:24px;height:2px;background:var(--cinza-texto)}
+    .breadcrumb{max-width:1200px;margin:0 auto;padding:16px 24px;font-size:13px;color:var(--cinza-sub)}.breadcrumb a{color:var(--azul-hero)}
+    .page-header{padding:60px 24px;background:linear-gradient(180deg,var(--azul-bg) 0%,var(--branco) 100%);text-align:center}
+    .page-header h1{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;margin-bottom:16px}.page-header h1 span{color:var(--azul-hero)}
+    .page-header .lead{font-size:18px;color:var(--cinza-sub);max-width:700px;margin:0 auto}
+    .content-section{padding:60px 24px}.container{max-width:1000px;margin:0 auto}
+    .posts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+    .post-card{background:var(--branco);border:1px solid var(--borda);border-radius:var(--radius);overflow:hidden;transition:0.2s}
+    .post-card:hover{border-color:var(--azul-hero);transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+    .post-card .thumb{height:160px;background:var(--azul-bg);display:flex;align-items:center;justify-content:center;font-size:3rem}
+    .post-card .content{padding:24px}
+    .post-card .tag{display:inline-block;font-size:11px;font-weight:600;color:var(--azul-hero);background:var(--azul-bg);padding:4px 10px;border-radius:20px;margin-bottom:12px}
+    .post-card h3{font-size:1.1rem;margin-bottom:8px;line-height:1.4}
+    .post-card p{font-size:14px;color:var(--cinza-sub);margin-bottom:16px}
+    .post-card .read-more{color:var(--azul-hero);font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:6px}
+    .categories{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:40px}
+    .categories a{padding:8px 20px;background:var(--cinza-bg);border-radius:20px;font-size:14px;font-weight:500;transition:0.2s}
+    .categories a:hover,.categories a.active{background:var(--azul-hero);color:white}
+    footer{background:var(--cinza-texto);color:white;padding:40px 24px}
+    .footer-inner{max-width:1200px;margin:0 auto;text-align:center;font-size:14px;color:rgba(255,255,255,0.7)}
+    .float-wpp{position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:var(--verde-wpp);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:99}
+    .float-wpp svg{width:32px;height:32px;fill:white}
+    @media(max-width:968px){nav{display:none}.hamburger{display:flex}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo"><img src="/images/logo.png" alt="Gás P20 Empilhadeira"></a>
+    <nav>
+      <a href="/">Início</a>
+      <a href="/gas-p20-empilhadeira/">Gás P20</a>
+      <a href="/preco-gas-p20/">Preços</a>
+      <a href="/contato/" class="nav-cta">Contato</a>
+    </nav>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="/">Início</a> → <strong>Blog</strong>
+</div>
+
+<section class="page-header">
+  <h1>Blog <span>Gás P20</span></h1>
+  <p class="lead">Dicas, guias e informações sobre empilhadeiras a GLP para sua empresa.</p>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="categories">
+      <a href="#" class="active">Todos</a>
+      <a href="#economia">Economia</a>
+      <a href="#manutencao">Manutenção</a>
+      <a href="#operacao">Operação</a>
+      <a href="#seguranca">Segurança</a>
+    </div>
+    
+    <div class="posts-grid">
+      <a href="/blog/vale-pena-converter-glp/" class="post-card">
+        <div class="thumb">🔄</div>
+        <div class="content">
+          <span class="tag">Economia</span>
+          <h3>Vale a Pena Converter para GLP?</h3>
+          <p>Análise completa sobre custos e benefícios de converter sua empilhadeira para gás.</p>
+          <span class="read-more">Ler artigo →</span>
+        </div>
+      </a>
+      
+      <a href="/blog/reduzir-custos-frota/" class="post-card">
+        <div class="thumb">💰</div>
+        <div class="content">
+          <span class="tag">Economia</span>
+          <h3>Como Reduzir Custos da Frota</h3>
+          <p>Estratégias práticas para economizar na operação de empilhadeiras.</p>
+          <span class="read-more">Ler artigo →</span>
+        </div>
+      </a>
+      
+      <a href="/blog/empilhadeira-nao-liga/" class="post-card">
+        <div class="thumb">🔧</div>
+        <div class="content">
+          <span class="tag">Manutenção</span>
+          <h3>Empilhadeira Não Liga: O que Fazer?</h3>
+          <p>Diagnóstico e soluções para quando sua empilhadeira a GLP não quer ligar.</p>
+          <span class="read-more">Ler artigo →</span>
+        </div>
+      </a>
+      
+      <a href="/blog/como-calcular-consumo/" class="post-card">
+        <div class="thumb">📊</div>
+        <div class="content">
+          <span class="tag">Operação</span>
+          <h3>Como Calcular o Consumo de GLP</h3>
+          <p>Fórmulas e exemplos para calcular o consumo da sua empilhadeira.</p>
+          <span class="read-more">Ler artigo →</span>
+        </div>
+      </a>
+      
+      <a href="/blog/nr-11-empilhadeiras/" class="post-card">
+        <div class="thumb">📋</div>
+        <div class="content">
+          <span class="tag">Segurança</span>
+          <h3>NR-11: Normas para Empilhadeiras</h3>
+          <p>Tudo sobre a norma regulamentadora de segurança em empilhadeiras.</p>
+          <span class="read-more">Ler artigo →</span>
+        </div>
+      </a>
+      
+      <a href="/blog/glp-ambiente-fechado/" class="post-card">
+        <div class="thumb">🏭</div>
+        <div class="content">
+          <span class="tag">Segurança</span>
+          <h3>GLP em Ambiente Fechado: Pode?</h3>
+          <p>Regras e cuidados para operar empilhadeiras a GLP em galpões.</p>
+          <span class="read-more">Ler artigo →</span>
+        </div>
+      </a>
+      
+      <a href="/blog/dicas-operador/" class="post-card">
+        <div class="thumb">👷</div>
+        <div class="content">
+          <span class="tag">Operação</span>
+          <h3>Dicas para Operadores</h3>
+          <p>Boas práticas para operar empilhadeiras com segurança e eficiência.</p>
+          <span class="read-more">Ler artigo →</span>
+        </div>
+      </a>
+      
+      <a href="/blog/tipos-empilhadeira/" class="post-card">
+        <div class="thumb">🚜</div>
+        <div class="content">
+          <span class="tag">Guia</span>
+          <h3>Tipos de Empilhadeira</h3>
+          <p>Conheça os diferentes tipos de empilhadeira e suas aplicações.</p>
+          <span class="read-more">Ler artigo →</span>
+        </div>
+      </a>
+      
+      <a href="/blog/capacidade-carga/" class="post-card">
+        <div class="thumb">📦</div>
+        <div class="content">
+          <span class="tag">Operação</span>
+          <h3>Capacidade de Carga</h3>
+          <p>Como interpretar e respeitar a capacidade de carga da empilhadeira.</p>
+          <span class="read-more">Ler artigo →</span>
+        </div>
+      </a>
+      
+      <a href="/blog/empilhadeira-usada-glp/" class="post-card">
+        <div class="thumb">🔍</div>
+        <div class="content">
+          <span class="tag">Guia</span>
+          <h3>Comprar Empilhadeira Usada a GLP</h3>
+          <p>O que verificar antes de comprar uma empilhadeira usada a gás.</p>
+          <span class="read-more">Ler artigo →</span>
+        </div>
+      </a>
+      
+      <a href="/blog/historia-empilhadeira/" class="post-card">
+        <div class="thumb">📜</div>
+        <div class="content">
+          <span class="tag">Curiosidade</span>
+          <h3>História da Empilhadeira</h3>
+          <p>Como surgiu a empilhadeira e sua evolução até os dias de hoje.</p>
+          <span class="read-more">Ler artigo →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Gás P20 Empilhadeira — Campo Grande/MS — (67) 99131-0665</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/5567991310665" target="_blank" class="float-wpp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+</a>
+
+</body>
+</html>

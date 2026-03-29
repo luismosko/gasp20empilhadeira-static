@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--
+  quanto-custa-abastecer/index.html | Versão: 1.0.0 | Atualizado: 2026-03-29 | Quanto custa abastecer
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quanto Custa Abastecer uma Empilhadeira a GLP? — Cálculo Completo</title>
+  <meta name="description" content="Descubra quanto custa abastecer uma empilhadeira a GLP. Cálculo de custo por hora, por dia e por mês. Compare com diesel e elétrica.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gasp20empilhadeira.com.br/quanto-custa-abastecer/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--azul-hero:#0891b2;--azul-claro:#06b6d4;--azul-escuro:#0e7490;--azul-bg:#ecfeff;--laranja:#f97316;--laranja-hover:#ea580c;--verde-wpp:#25D366;--cinza-bg:#f8fafc;--cinza-texto:#1e293b;--cinza-sub:#64748b;--branco:#ffffff;--borda:#e2e8f0;--radius:16px;--radius-btn:12px}
+    body{font-family:'Inter',sans-serif;color:var(--cinza-texto);line-height:1.7;background:var(--branco)}
+    a{text-decoration:none;color:inherit}img{max-width:100%;height:auto}
+    header{background:var(--branco);padding:16px 24px;border-bottom:1px solid var(--borda);position:sticky;top:0;z-index:100}
+    .header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .logo img{height:50px}
+    nav{display:flex;gap:8px}nav a{padding:10px 18px;font-size:14px;font-weight:500;color:var(--cinza-sub);border-radius:var(--radius-btn);transition:0.2s}nav a:hover{background:var(--azul-bg)}
+    .nav-cta{background:var(--laranja)!important;color:white!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:8px;cursor:pointer}.hamburger span{width:24px;height:2px;background:var(--cinza-texto)}
+    .breadcrumb{max-width:1200px;margin:0 auto;padding:16px 24px;font-size:13px;color:var(--cinza-sub)}.breadcrumb a{color:var(--azul-hero)}
+    .page-header{padding:60px 24px;background:linear-gradient(180deg,var(--azul-bg) 0%,var(--branco) 100%);text-align:center}
+    .page-header h1{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;margin-bottom:16px}.page-header h1 span{color:var(--azul-hero)}
+    .page-header .lead{font-size:18px;color:var(--cinza-sub);max-width:700px;margin:0 auto}
+    .content-section{padding:60px 24px}.container{max-width:900px;margin:0 auto}
+    .content-text h2{font-size:1.5rem;font-weight:700;margin:40px 0 16px}.content-text h3{font-size:1.2rem;font-weight:600;margin:32px 0 12px}
+    .content-text p{margin-bottom:16px}.content-text ul,.content-text ol{margin:16px 0 24px 24px}.content-text li{margin-bottom:8px}.content-text strong{color:var(--azul-escuro)}
+    .calc-box{background:var(--azul-bg);border-radius:var(--radius);padding:32px;margin:32px 0}
+    .calc-box h3{color:var(--azul-escuro);margin-bottom:20px;text-align:center}
+    .calc-result{background:var(--branco);border-radius:var(--radius-btn);padding:24px;margin-top:20px}
+    .calc-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--borda)}
+    .calc-row:last-child{border-bottom:none;font-weight:700;font-size:1.1rem;color:var(--azul-hero)}
+    .calc-row span:first-child{color:var(--cinza-sub)}
+    .formula-box{background:var(--cinza-bg);border-radius:var(--radius);padding:24px;margin:24px 0;font-family:monospace;font-size:14px}
+    .compare-table{width:100%;border-collapse:collapse;margin:32px 0;background:var(--branco);border-radius:var(--radius);overflow:hidden}
+    .compare-table th,.compare-table td{padding:16px;text-align:center;border-bottom:1px solid var(--borda)}
+    .compare-table th{background:var(--azul-bg);font-weight:600;color:var(--azul-escuro)}
+    .compare-table td:first-child{text-align:left;font-weight:500}
+    .highlight-cell{background:var(--azul-bg);font-weight:600;color:var(--azul-hero)}
+    .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--laranja);color:white;padding:16px 32px;border-radius:var(--radius-btn);font-weight:600;transition:0.3s}
+    .btn-primary:hover{background:var(--laranja-hover)}.btn-primary svg{width:20px;height:20px;fill:currentColor}
+    .cta-section{background:linear-gradient(135deg,var(--azul-hero) 0%,var(--azul-escuro) 100%);padding:60px 24px;text-align:center}
+    .cta-section h2{color:white;margin-bottom:12px}.cta-section p{color:rgba(255,255,255,0.9);margin-bottom:24px}
+    .cta-section .btn-primary{background:white;color:var(--azul-hero)}
+    footer{background:var(--cinza-texto);color:white;padding:40px 24px}
+    .footer-inner{max-width:1200px;margin:0 auto;text-align:center;font-size:14px;color:rgba(255,255,255,0.7)}
+    .float-wpp{position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:var(--verde-wpp);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:99}
+    .float-wpp svg{width:32px;height:32px;fill:white}
+    @media(max-width:968px){nav{display:none}.hamburger{display:flex}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo"><img src="/images/logo.png" alt="Gás P20 Empilhadeira"></a>
+    <nav>
+      <a href="/">Início</a>
+      <a href="/gas-p20-empilhadeira/">Gás P20</a>
+      <a href="/preco-gas-p20/">Preços</a>
+      <a href="/contato/" class="nav-cta">Contato</a>
+    </nav>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="/">Início</a> → <a href="/preco-gas-p20/">Preços</a> → <strong>Quanto Custa Abastecer</strong>
+</div>
+
+<section class="page-header">
+  <h1>Quanto Custa <span>Abastecer</span>?</h1>
+  <p class="lead">Calcule o custo de combustível da sua empilhadeira a GLP e compare com outras opções.</p>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="content-text">
+      <h2>Custo de Abastecimento com GLP</h2>
+      <p>Para calcular quanto custa abastecer uma empilhadeira a GLP, precisamos considerar três fatores principais: o <strong>preço do cilindro P20</strong>, a <strong>autonomia</strong> do cilindro e as <strong>horas de operação</strong> diárias.</p>
+      
+      <div class="calc-box">
+        <h3>📊 Exemplo de Cálculo</h3>
+        <p style="text-align:center;color:var(--cinza-sub);margin-bottom:20px">Empilhadeira operando 8 horas por dia, 22 dias por mês</p>
+        
+        <div class="calc-result">
+          <div class="calc-row">
+            <span>Autonomia média do P20</span>
+            <span>8 horas</span>
+          </div>
+          <div class="calc-row">
+            <span>Cilindros por dia (8h operação)</span>
+            <span>1 cilindro</span>
+          </div>
+          <div class="calc-row">
+            <span>Cilindros por mês (22 dias)</span>
+            <span>22 cilindros</span>
+          </div>
+          <div class="calc-row">
+            <span>Custo mensal estimado</span>
+            <span>Consulte cotação</span>
+          </div>
+        </div>
+      </div>
+      
+      <h2>Como Calcular seu Custo</h2>
+      <p>Use esta fórmula simples para estimar seu custo mensal:</p>
+      
+      <div class="formula-box">
+        <strong>Custo Mensal</strong> = (Horas diárias ÷ Autonomia do cilindro) × Dias de operação × Preço do cilindro
+      </div>
+      
+      <h3>Fatores que Afetam o Consumo</h3>
+      <ul>
+        <li><strong>Potência da empilhadeira:</strong> Motores maiores consomem mais</li>
+        <li><strong>Carga transportada:</strong> Cargas pesadas aumentam o consumo</li>
+        <li><strong>Inclinação:</strong> Rampas exigem mais combustível</li>
+        <li><strong>Estilo de operação:</strong> Partidas e frenagens bruscas gastam mais</li>
+        <li><strong>Manutenção:</strong> Motor bem regulado é mais econômico</li>
+      </ul>
+      
+      <h2>GLP vs Diesel vs Elétrica: Custo Operacional</h2>
+      
+      <table class="compare-table">
+        <tr>
+          <th>Fator</th>
+          <th class="highlight-cell">GLP</th>
+          <th>Diesel</th>
+          <th>Elétrica</th>
+        </tr>
+        <tr>
+          <td>Custo combustível/energia</td>
+          <td class="highlight-cell">Médio</td>
+          <td>Alto</td>
+          <td>Baixo</td>
+        </tr>
+        <tr>
+          <td>Tempo de abastecimento</td>
+          <td class="highlight-cell">2 min</td>
+          <td>5 min</td>
+          <td>6-8 horas</td>
+        </tr>
+        <tr>
+          <td>Custo de manutenção</td>
+          <td class="highlight-cell">Médio</td>
+          <td>Alto</td>
+          <td>Baixo</td>
+        </tr>
+        <tr>
+          <td>Investimento inicial</td>
+          <td class="highlight-cell">Médio</td>
+          <td>Médio</td>
+          <td>Alto (+ baterias)</td>
+        </tr>
+        <tr>
+          <td>Uso interno</td>
+          <td class="highlight-cell">✅ Sim</td>
+          <td>❌ Não</td>
+          <td>✅ Sim</td>
+        </tr>
+      </table>
+      
+      <h2>Dicas para Economizar</h2>
+      <ol>
+        <li><strong>Faça contrato de fornecimento</strong> — preço fixo e condições melhores</li>
+        <li><strong>Compre em volume</strong> — quanto mais cilindros, menor o preço unitário</li>
+        <li><strong>Mantenha a empilhadeira regulada</strong> — motor afinado gasta menos</li>
+        <li><strong>Treine os operadores</strong> — condução suave economiza combustível</li>
+        <li><strong>Monitore o consumo</strong> — identifique anomalias rapidamente</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Quer Saber o Custo Exato para sua Empresa?</h2>
+  <p>Solicite cotação personalizada baseada na sua operação</p>
+  <a href="https://wa.me/5567991310665?text=Ol%C3%A1!%20Quero%20calcular%20o%20custo%20de%20abastecimento%20da%20minha%20empilhadeira." target="_blank" class="btn-primary">
+    Solicitar Cotação
+  </a>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Gás P20 Empilhadeira — Campo Grande/MS — (67) 99131-0665</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/5567991310665" target="_blank" class="float-wpp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+</a>
+
+</body>
+</html>

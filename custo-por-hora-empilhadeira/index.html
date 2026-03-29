@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--
+  custo-por-hora-empilhadeira/index.html | Versão: 1.0.0 | Atualizado: 2026-03-29 | Custo por hora
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custo por Hora de Empilhadeira a GLP — Cálculo de Operação</title>
+  <meta name="description" content="Quanto custa operar uma empilhadeira a GLP por hora? Cálculo detalhado do custo operacional incluindo combustível, manutenção e operador.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gasp20empilhadeira.com.br/custo-por-hora-empilhadeira/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--azul-hero:#0891b2;--azul-claro:#06b6d4;--azul-escuro:#0e7490;--azul-bg:#ecfeff;--laranja:#f97316;--laranja-hover:#ea580c;--verde-wpp:#25D366;--cinza-bg:#f8fafc;--cinza-texto:#1e293b;--cinza-sub:#64748b;--branco:#ffffff;--borda:#e2e8f0;--radius:16px;--radius-btn:12px}
+    body{font-family:'Inter',sans-serif;color:var(--cinza-texto);line-height:1.7;background:var(--branco)}
+    a{text-decoration:none;color:inherit}img{max-width:100%;height:auto}
+    header{background:var(--branco);padding:16px 24px;border-bottom:1px solid var(--borda);position:sticky;top:0;z-index:100}
+    .header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .logo img{height:50px}
+    nav{display:flex;gap:8px}nav a{padding:10px 18px;font-size:14px;font-weight:500;color:var(--cinza-sub);border-radius:var(--radius-btn);transition:0.2s}nav a:hover{background:var(--azul-bg)}
+    .nav-cta{background:var(--laranja)!important;color:white!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:8px;cursor:pointer}.hamburger span{width:24px;height:2px;background:var(--cinza-texto)}
+    .breadcrumb{max-width:1200px;margin:0 auto;padding:16px 24px;font-size:13px;color:var(--cinza-sub)}.breadcrumb a{color:var(--azul-hero)}
+    .page-header{padding:60px 24px;background:linear-gradient(180deg,var(--azul-bg) 0%,var(--branco) 100%);text-align:center}
+    .page-header h1{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;margin-bottom:16px}.page-header h1 span{color:var(--azul-hero)}
+    .page-header .lead{font-size:18px;color:var(--cinza-sub);max-width:700px;margin:0 auto}
+    .content-section{padding:60px 24px}.container{max-width:900px;margin:0 auto}
+    .content-text h2{font-size:1.5rem;font-weight:700;margin:40px 0 16px}.content-text h3{font-size:1.2rem;font-weight:600;margin:32px 0 12px}
+    .content-text p{margin-bottom:16px}.content-text ul{margin:16px 0 24px 24px}.content-text li{margin-bottom:8px}.content-text strong{color:var(--azul-escuro)}
+    .cost-breakdown{background:var(--azul-bg);border-radius:var(--radius);padding:32px;margin:32px 0}
+    .cost-breakdown h3{color:var(--azul-escuro);margin-bottom:24px;text-align:center}
+    .cost-item{display:flex;justify-content:space-between;align-items:center;padding:16px;background:var(--branco);border-radius:var(--radius-btn);margin-bottom:12px}
+    .cost-item:last-child{margin-bottom:0;background:var(--azul-hero);color:white}
+    .cost-item .label{font-weight:500}
+    .cost-item .value{font-weight:700;font-size:1.1rem}
+    .cost-item .note{font-size:12px;color:var(--cinza-sub)}
+    .cost-item:last-child .note{color:rgba(255,255,255,0.8)}
+    .info-box{background:var(--cinza-bg);border-left:4px solid var(--azul-hero);padding:20px;border-radius:0 var(--radius-btn) var(--radius-btn) 0;margin:24px 0}
+    .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--laranja);color:white;padding:16px 32px;border-radius:var(--radius-btn);font-weight:600;transition:0.3s}
+    .btn-primary:hover{background:var(--laranja-hover)}.btn-primary svg{width:20px;height:20px;fill:currentColor}
+    .cta-section{background:linear-gradient(135deg,var(--azul-hero) 0%,var(--azul-escuro) 100%);padding:60px 24px;text-align:center}
+    .cta-section h2{color:white;margin-bottom:12px}.cta-section p{color:rgba(255,255,255,0.9);margin-bottom:24px}
+    .cta-section .btn-primary{background:white;color:var(--azul-hero)}
+    footer{background:var(--cinza-texto);color:white;padding:40px 24px}
+    .footer-inner{max-width:1200px;margin:0 auto;text-align:center;font-size:14px;color:rgba(255,255,255,0.7)}
+    .float-wpp{position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:var(--verde-wpp);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:99}
+    .float-wpp svg{width:32px;height:32px;fill:white}
+    @media(max-width:968px){nav{display:none}.hamburger{display:flex}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo"><img src="/images/logo.png" alt="Gás P20 Empilhadeira"></a>
+    <nav>
+      <a href="/">Início</a>
+      <a href="/gas-p20-empilhadeira/">Gás P20</a>
+      <a href="/preco-gas-p20/">Preços</a>
+      <a href="/contato/" class="nav-cta">Contato</a>
+    </nav>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="/">Início</a> → <a href="/preco-gas-p20/">Preços</a> → <strong>Custo por Hora</strong>
+</div>
+
+<section class="page-header">
+  <h1>Custo por Hora de <span>Empilhadeira</span></h1>
+  <p class="lead">Entenda todos os componentes do custo operacional de uma empilhadeira a GLP por hora de operação.</p>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="content-text">
+      <h2>Componentes do Custo Operacional</h2>
+      <p>O custo total por hora de operação de uma empilhadeira a GLP envolve mais do que apenas o combustível. Veja a composição completa:</p>
+      
+      <div class="cost-breakdown">
+        <h3>💰 Custo Horário Estimado</h3>
+        
+        <div class="cost-item">
+          <div>
+            <div class="label">⛽ Combustível (GLP)</div>
+            <div class="note">Baseado na autonomia média do P20</div>
+          </div>
+          <div class="value">Variável</div>
+        </div>
+        
+        <div class="cost-item">
+          <div>
+            <div class="label">🔧 Manutenção</div>
+            <div class="note">Preventiva + corretiva diluída</div>
+          </div>
+          <div class="value">~R$ 5-10/h</div>
+        </div>
+        
+        <div class="cost-item">
+          <div>
+            <div class="label">📉 Depreciação</div>
+            <div class="note">Baseado em 10.000h de vida útil</div>
+          </div>
+          <div class="value">~R$ 8-15/h</div>
+        </div>
+        
+        <div class="cost-item">
+          <div>
+            <div class="label">👷 Operador</div>
+            <div class="note">Salário + encargos diluídos</div>
+          </div>
+          <div class="value">~R$ 15-25/h</div>
+        </div>
+        
+        <div class="cost-item">
+          <div>
+            <div class="label">📊 CUSTO TOTAL ESTIMADO</div>
+            <div class="note">Soma de todos os componentes</div>
+          </div>
+          <div class="value">Consulte</div>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>💡 Importante:</strong> Os valores acima são estimativas médias. O custo real varia conforme o modelo da empilhadeira, intensidade de uso, salário regional e preço do GLP na sua localidade.
+      </div>
+      
+      <h2>Custo de Combustível por Hora</h2>
+      <p>Para calcular especificamente o custo de combustível GLP por hora:</p>
+      <ul>
+        <li>Consumo médio de empilhadeira: <strong>2,5 a 5,0 litros/hora</strong></li>
+        <li>Um cilindro P20 tem aproximadamente 40 litros de GLP</li>
+        <li>Autonomia média: <strong>8 horas</strong></li>
+        <li>Custo por hora = Preço do cilindro ÷ Horas de autonomia</li>
+      </ul>
+      
+      <h2>Comparativo: GLP vs Diesel</h2>
+      <p>Empilhadeiras a GLP geralmente têm custo de combustível <strong>20% a 30% menor</strong> que empilhadeiras a diesel, além de:</p>
+      <ul>
+        <li>Manutenção do motor mais barata (combustão mais limpa)</li>
+        <li>Menor desgaste de componentes internos</li>
+        <li>Possibilidade de uso em ambientes fechados</li>
+        <li>Menor impacto ambiental</li>
+      </ul>
+      
+      <h2>Como Reduzir o Custo por Hora</h2>
+      <ol>
+        <li><strong>Negocie o preço do GLP:</strong> Contratos de fornecimento garantem melhores preços</li>
+        <li><strong>Manutenção preventiva:</strong> Evita paradas não programadas e reparos caros</li>
+        <li><strong>Treinamento de operadores:</strong> Condução eficiente economiza combustível</li>
+        <li><strong>Dimensionamento correto:</strong> Use empilhadeira adequada para cada tarefa</li>
+        <li><strong>Planejamento de rotas:</strong> Menos deslocamento = menos consumo</li>
+      </ol>
+      
+      <h3>Monitoramento de Custos</h3>
+      <p>Recomendamos que sua empresa mantenha um registro de:</p>
+      <ul>
+        <li>Consumo de cilindros por empilhadeira</li>
+        <li>Horas trabalhadas por equipamento</li>
+        <li>Custos de manutenção por máquina</li>
+        <li>Comparativo mensal de custos operacionais</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Quer Otimizar seus Custos?</h2>
+  <p>Solicite uma cotação e veja como podemos reduzir seu custo por hora</p>
+  <a href="https://wa.me/5567991310665?text=Ol%C3%A1!%20Quero%20saber%20como%20reduzir%20o%20custo%20por%20hora%20da%20minha%20empilhadeira." target="_blank" class="btn-primary">
+    Falar com Especialista
+  </a>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Gás P20 Empilhadeira — Campo Grande/MS — (67) 99131-0665</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/5567991310665" target="_blank" class="float-wpp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+</a>
+
+</body>
+</html>

@@ -1,160 +1,155 @@
-<!--
-  index.html | Versão: 1.2.2 | Atualizado: 2026-03-28 | Logo retangular + cilindro corrigido
--->
 <!DOCTYPE html>
+<!--
+  index.html | Versão: 2.0.0 | Atualizado: 2026-03-29 | Layout leve azul cyan com logo original colorida
+-->
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gás de Empilhadeira em Campo Grande MS — P20 GLP para Empilhadeiras | Gás P20</title>
   <meta name="description" content="Gás P20 para empilhadeiras em Campo Grande. Abastecimento GLP com entrega rápida. Contrato empresarial. WhatsApp (67) 99131-0665.">
-  <meta name="keywords" content="gás de empilhadeira campo grande, gás p20 empilhadeira, GLP empilhadeira, recarga gás empilhadeira, abastecimento empilhadeira GLP">
-  <meta name="author" content="Gás P20 Empilhadeira">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://gasp20empilhadeira.com.br/">
   
-  <!-- Open Graph -->
-  <meta property="og:title" content="Gás de Empilhadeira em Campo Grande MS — P20 GLP">
-  <meta property="og:description" content="Abastecimento de GLP P20 para empilhadeiras. Entrega rápida para sua empresa. Contrato de fornecimento.">
-  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gás de Empilhadeira em Campo Grande MS">
+  <meta property="og:description" content="Abastecimento de GLP P20 para empilhadeiras. Entrega rápida e contrato empresarial.">
   <meta property="og:url" content="https://gasp20empilhadeira.com.br/">
+  <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:site_name" content="Gás P20 Empilhadeira">
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  
-  <!-- Fonte Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
-    :root {
-      --primaria: #1a1a2e;
-      --primaria-clara: #16213e;
-      --secundaria: #f5a623;
-      --secundaria-hover: #e09000;
-      --accent: #0f3460;
-      --verde-wpp: #25D366;
-      --cinza-metal: #7f8c8d;
-      --cinza-claro: #bdc3c7;
-      --cinza-bg: #f4f6f7;
-      --cinza-texto: #2c3e50;
-      --cinza-sub: #5d6d7e;
-      --branco: #ffffff;
-      --borda: #d5dbdb;
-      --radius: 12px;
-      --radius-btn: 8px;
-      --shadow: 0 4px 20px rgba(0,0,0,0.1);
-      --shadow-hover: 0 8px 30px rgba(0,0,0,0.15);
-    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      /* Azul claro e suave - diferente do Mosko */
+      --azul-hero: #0891b2;       /* Cyan/teal */
+      --azul-claro: #06b6d4;      /* Cyan mais claro */
+      --azul-escuro: #0e7490;     /* Cyan escuro */
+      --azul-bg: #ecfeff;         /* Fundo azul bem claro */
+      
+      --laranja: #f97316;         /* Laranja para CTAs */
+      --laranja-hover: #ea580c;
+      
+      --verde-wpp: #25D366;
+      --cinza-bg: #f8fafc;
+      --cinza-texto: #1e293b;
+      --cinza-sub: #64748b;
+      --branco: #ffffff;
+      --borda: #e2e8f0;
+      
+      --radius: 16px;
+      --radius-btn: 12px;
+      --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
     }
     
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Inter', sans-serif;
       color: var(--cinza-texto);
       line-height: 1.6;
       background: var(--branco);
     }
     
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; }
     
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    /* HEADER */
-    .header {
-      background: var(--primaria);
-      padding: 12px 0;
+    /* ══════════════════════════════════════════════════════════════
+       HEADER - Limpo e leve
+       ══════════════════════════════════════════════════════════════ */
+    header {
+      background: var(--branco);
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--borda);
       position: sticky;
       top: 0;
-      z-index: 1000;
-      box-shadow: var(--shadow);
+      z-index: 100;
     }
     
     .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
+      gap: 24px;
     }
     
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-    
-    .logo-img {
-      height: 55px;
+    .logo img {
+      height: 50px;
       width: auto;
     }
     
-    @media (min-width: 768px) {
-      .logo-img {
-        height: 65px;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .logo-img {
-        height: 75px;
-      }
-    }
-    
-    .header-contact {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    
-    .header-phone {
-      color: var(--branco);
-      font-weight: 600;
+    nav {
       display: flex;
       align-items: center;
       gap: 8px;
     }
     
-    .header-phone svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--secundaria);
-    }
-    
-    .btn-header {
-      background: var(--secundaria);
-      color: var(--branco);
-      padding: 12px 24px;
+    nav a {
+      padding: 10px 18px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--cinza-sub);
       border-radius: var(--radius-btn);
+      transition: all 0.2s;
+    }
+    
+    nav a:hover {
+      background: var(--azul-bg);
+      color: var(--azul-escuro);
+    }
+    
+    .nav-cta {
+      background: var(--laranja) !important;
+      color: white !important;
+      font-weight: 600 !important;
+    }
+    
+    .nav-cta:hover {
+      background: var(--laranja-hover) !important;
+    }
+    
+    .header-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       font-weight: 600;
-      transition: all 0.3s ease;
+      color: var(--cinza-texto);
     }
     
-    .btn-header:hover {
-      background: var(--secundaria-hover);
-      transform: translateY(-2px);
+    .header-phone svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--azul-hero);
     }
     
-    /* HERO */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 8px;
+    }
+    
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--cinza-texto);
+      border-radius: 2px;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════
+       HERO - Claro e arejado com gradiente suave
+       ══════════════════════════════════════════════════════════════ */
     .hero {
-      background: linear-gradient(135deg, var(--primaria) 0%, var(--primaria-clara) 50%, var(--accent) 100%);
-      padding: 80px 0;
+      background: linear-gradient(180deg, var(--azul-bg) 0%, var(--branco) 100%);
+      padding: 60px 24px 80px;
       position: relative;
       overflow: hidden;
     }
@@ -164,13 +159,16 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 50%;
+      width: 60%;
       height: 100%;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='%23ffffff' opacity='0.03'/%3E%3C/svg%3E");
-      background-size: 60px;
+      background: linear-gradient(135deg, rgba(8,145,178,0.08) 0%, rgba(6,182,212,0.05) 100%);
+      border-radius: 0 0 0 50%;
+      z-index: 0;
     }
     
-    .hero-content {
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
@@ -183,183 +181,203 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(245, 166, 35, 0.15);
-      color: var(--secundaria);
+      background: var(--branco);
+      border: 1px solid var(--borda);
       padding: 8px 16px;
       border-radius: 50px;
-      font-size: 0.85rem;
+      font-size: 13px;
       font-weight: 600;
+      color: var(--azul-escuro);
       margin-bottom: 20px;
-      border: 1px solid rgba(245, 166, 35, 0.3);
+      box-shadow: var(--shadow);
+    }
+    
+    .hero-badge svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--laranja);
     }
     
     .hero h1 {
-      font-size: 2.8rem;
+      font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 800;
-      color: var(--branco);
-      line-height: 1.2;
+      color: var(--cinza-texto);
+      line-height: 1.15;
       margin-bottom: 20px;
     }
     
     .hero h1 span {
-      color: var(--secundaria);
+      color: var(--azul-hero);
     }
     
-    .hero-subtitle {
-      font-size: 1.2rem;
-      color: rgba(255,255,255,0.8);
-      margin-bottom: 30px;
+    .hero-desc {
+      font-size: 18px;
+      color: var(--cinza-sub);
+      margin-bottom: 32px;
       line-height: 1.7;
     }
     
-    .hero-buttons {
+    .hero-btns {
       display: flex;
-      gap: 15px;
+      gap: 16px;
       flex-wrap: wrap;
+      margin-bottom: 40px;
     }
     
     .btn-primary {
-      background: var(--secundaria);
-      color: var(--branco);
-      padding: 16px 32px;
-      border-radius: var(--radius-btn);
-      font-weight: 700;
-      font-size: 1rem;
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
+      background: var(--laranja);
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 16px 32px;
+      border-radius: var(--radius-btn);
+      transition: all 0.2s;
+      box-shadow: 0 4px 14px rgba(249,115,22,0.4);
     }
     
     .btn-primary:hover {
-      background: var(--secundaria-hover);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(245, 166, 35, 0.4);
+      background: var(--laranja-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(249,115,22,0.5);
+    }
+    
+    .btn-primary svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
     }
     
     .btn-secondary {
-      background: transparent;
-      color: var(--branco);
-      padding: 16px 32px;
-      border-radius: var(--radius-btn);
-      font-weight: 600;
-      font-size: 1rem;
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      transition: all 0.3s ease;
-      border: 2px solid rgba(255,255,255,0.3);
+      background: var(--branco);
+      color: var(--cinza-texto);
+      font-weight: 600;
+      font-size: 16px;
+      padding: 16px 32px;
+      border-radius: var(--radius-btn);
+      border: 2px solid var(--borda);
+      transition: all 0.2s;
     }
     
     .btn-secondary:hover {
-      border-color: var(--branco);
-      background: rgba(255,255,255,0.1);
+      border-color: var(--azul-hero);
+      color: var(--azul-hero);
     }
     
+    .btn-secondary svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+    
+    /* Stats */
     .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 40px;
+      display: flex;
+      gap: 32px;
     }
     
     .stat-item {
-      text-align: center;
-      padding: 20px;
-      background: rgba(255,255,255,0.05);
-      border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,0.1);
+      text-align: left;
     }
     
     .stat-number {
       font-size: 2rem;
       font-weight: 800;
-      color: var(--secundaria);
+      color: var(--azul-hero);
+      line-height: 1;
+    }
+    
+    .stat-number span {
+      font-size: 1.2rem;
     }
     
     .stat-label {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.7);
-      margin-top: 5px;
+      font-size: 13px;
+      color: var(--cinza-sub);
+      margin-top: 4px;
     }
     
-    .hero-image {
+    /* Hero Image */
+    .hero-visual {
       display: flex;
       justify-content: center;
       align-items: center;
     }
     
-    .hero-image img {
-      max-width: 100%;
-      height: auto;
+    .hero-img-wrapper {
+      position: relative;
+      background: linear-gradient(135deg, var(--azul-hero) 0%, var(--azul-claro) 100%);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
     }
     
-    /* BENEFÍCIOS */
+    .hero-img-wrapper img {
+      height: 320px;
+      width: auto;
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2));
+    }
+    
+    /* ══════════════════════════════════════════════════════════════
+       BENEFÍCIOS - Cards claros
+       ══════════════════════════════════════════════════════════════ */
     .beneficios {
-      padding: 80px 0;
-      background: var(--cinza-bg);
+      padding: 80px 24px;
+      background: var(--branco);
     }
     
     .section-header {
       text-align: center;
-      margin-bottom: 50px;
-    }
-    
-    .section-tag {
-      display: inline-block;
-      background: var(--secundaria);
-      color: var(--branco);
-      padding: 6px 16px;
-      border-radius: 50px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
+      max-width: 600px;
+      margin: 0 auto 48px;
     }
     
     .section-title {
-      font-size: 2.2rem;
+      font-size: clamp(1.5rem, 3vw, 2rem);
       font-weight: 800;
-      color: var(--primaria);
-      margin-bottom: 15px;
+      color: var(--cinza-texto);
+      margin-bottom: 12px;
     }
     
-    .section-subtitle {
-      font-size: 1.1rem;
+    .section-sub {
+      font-size: 16px;
       color: var(--cinza-sub);
-      max-width: 600px;
-      margin: 0 auto;
     }
     
     .beneficios-grid {
+      max-width: 1200px;
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
     
     .beneficio-card {
-      background: var(--branco);
-      padding: 35px 25px;
+      background: var(--cinza-bg);
       border-radius: var(--radius);
+      padding: 32px;
       text-align: center;
-      box-shadow: var(--shadow);
-      transition: all 0.3s ease;
-      border: 1px solid var(--borda);
+      transition: all 0.3s;
+      border: 1px solid transparent;
     }
     
     .beneficio-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-hover);
+      background: var(--branco);
+      border-color: var(--borda);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
     }
     
     .beneficio-icon {
-      width: 70px;
-      height: 70px;
-      background: linear-gradient(135deg, var(--primaria) 0%, var(--accent) 100%);
-      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--azul-bg) 0%, rgba(8,145,178,0.15) 100%);
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -369,889 +387,859 @@
     .beneficio-icon svg {
       width: 32px;
       height: 32px;
-      fill: var(--branco);
+      fill: var(--azul-hero);
     }
     
     .beneficio-card h3 {
-      font-size: 1.1rem;
+      font-size: 18px;
       font-weight: 700;
-      color: var(--primaria);
+      color: var(--cinza-texto);
       margin-bottom: 10px;
     }
     
     .beneficio-card p {
-      font-size: 0.9rem;
+      font-size: 14px;
       color: var(--cinza-sub);
       line-height: 1.6;
     }
     
-    /* SEGMENTOS */
-    .segmentos {
-      padding: 80px 0;
+    /* ══════════════════════════════════════════════════════════════
+       PRODUTOS - Visual limpo
+       ══════════════════════════════════════════════════════════════ */
+    .produtos {
+      padding: 80px 24px;
+      background: var(--azul-bg);
+    }
+    
+    .produtos-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+    
+    .produto-card {
+      background: var(--branco);
+      border-radius: var(--radius);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: all 0.3s;
+    }
+    
+    .produto-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    
+    .produto-card.destaque {
+      border: 2px solid var(--azul-hero);
+      position: relative;
+    }
+    
+    .produto-card.destaque::before {
+      content: 'Mais vendido';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--azul-hero);
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 16px;
+      border-radius: 20px;
+    }
+    
+    .produto-img {
+      height: 160px;
+      margin-bottom: 24px;
+    }
+    
+    .produto-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--cinza-texto);
+      margin-bottom: 8px;
+    }
+    
+    .produto-card .desc {
+      font-size: 14px;
+      color: var(--cinza-sub);
+      margin-bottom: 20px;
+    }
+    
+    .produto-specs {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    
+    .spec {
+      background: var(--cinza-bg);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--cinza-texto);
+    }
+    
+    .produto-card .btn-primary {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════
+       COMO FUNCIONA
+       ══════════════════════════════════════════════════════════════ */
+    .como-funciona {
+      padding: 80px 24px;
       background: var(--branco);
     }
     
-    .segmentos-grid {
+    .passos-grid {
+      max-width: 900px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
-    
-    .segmento-card {
-      background: var(--primaria);
-      padding: 40px 30px;
-      border-radius: var(--radius);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .segmento-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: var(--secundaria);
-    }
-    
-    .segmento-icon {
-      width: 60px;
-      height: 60px;
-      background: var(--secundaria);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      font-size: 28px;
-    }
-    
-    .segmento-card h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--branco);
-      margin-bottom: 10px;
-    }
-    
-    .segmento-card p {
-      font-size: 0.95rem;
-      color: rgba(255,255,255,0.7);
-      line-height: 1.6;
-    }
-    
-    /* COMO FUNCIONA */
-    .como-funciona {
-      padding: 80px 0;
-      background: var(--cinza-bg);
-    }
-    
-    .passos-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
-      position: relative;
-    }
-    
-    .passos-grid::before {
-      content: '';
-      position: absolute;
-      top: 40px;
-      left: 12.5%;
-      width: 75%;
-      height: 3px;
-      background: var(--borda);
-      z-index: 0;
+      gap: 32px;
     }
     
     .passo {
       text-align: center;
       position: relative;
-      z-index: 1;
     }
     
-    .passo-numero {
+    .passo:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 40px;
+      right: -16px;
+      width: 32px;
+      height: 2px;
+      background: var(--borda);
+    }
+    
+    .passo-num {
       width: 80px;
       height: 80px;
-      background: var(--primaria);
-      color: var(--branco);
+      background: linear-gradient(135deg, var(--azul-hero) 0%, var(--azul-claro) 100%);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.8rem;
-      font-weight: 800;
       margin: 0 auto 20px;
-      border: 4px solid var(--cinza-bg);
+      font-size: 28px;
+      font-weight: 800;
+      color: white;
     }
     
     .passo h3 {
-      font-size: 1.1rem;
+      font-size: 18px;
       font-weight: 700;
-      color: var(--primaria);
-      margin-bottom: 10px;
+      color: var(--cinza-texto);
+      margin-bottom: 8px;
     }
     
     .passo p {
-      font-size: 0.9rem;
+      font-size: 14px;
       color: var(--cinza-sub);
     }
     
-    /* FAQ */
+    /* ══════════════════════════════════════════════════════════════
+       FAQ
+       ══════════════════════════════════════════════════════════════ */
     .faq {
-      padding: 80px 0;
-      background: var(--branco);
+      padding: 80px 24px;
+      background: var(--cinza-bg);
     }
     
-    .faq-container {
+    .faq-list {
       max-width: 800px;
       margin: 0 auto;
     }
     
     .faq-item {
-      border: 1px solid var(--borda);
-      border-radius: var(--radius);
-      margin-bottom: 15px;
-      overflow: hidden;
       background: var(--branco);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
     }
     
-    .faq-question {
+    .faq-btn {
       width: 100%;
-      padding: 20px 25px;
-      background: var(--branco);
-      border: none;
       text-align: left;
-      font-size: 1rem;
+      background: none;
+      border: none;
+      padding: 24px;
+      font-size: 16px;
       font-weight: 600;
-      color: var(--primaria);
+      color: var(--cinza-texto);
       cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-family: inherit;
-      transition: background 0.3s ease;
+      gap: 16px;
+      font-family: 'Inter', sans-serif;
+      transition: background 0.2s;
     }
     
-    .faq-question:hover {
+    .faq-btn:hover {
       background: var(--cinza-bg);
     }
     
-    .faq-question svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--secundaria);
-      transition: transform 0.3s ease;
+    .faq-btn::after {
+      content: '+';
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--azul-hero);
+      transition: transform 0.3s;
     }
     
-    .faq-item.active .faq-question svg {
-      transform: rotate(180deg);
+    .faq-item.open .faq-btn::after {
+      transform: rotate(45deg);
     }
     
-    .faq-answer {
-      padding: 0 25px;
+    .faq-content {
       max-height: 0;
       overflow: hidden;
-      transition: all 0.3s ease;
+      transition: max-height 0.3s ease;
     }
     
-    .faq-item.active .faq-answer {
-      padding: 0 25px 20px;
+    .faq-item.open .faq-content {
       max-height: 300px;
     }
     
-    .faq-answer p {
+    .faq-content p {
+      padding: 0 24px 24px;
+      font-size: 15px;
       color: var(--cinza-sub);
       line-height: 1.7;
     }
     
-    /* CTA */
-    .cta {
-      padding: 80px 0;
-      background: linear-gradient(135deg, var(--primaria) 0%, var(--accent) 100%);
+    .faq-content strong {
+      color: var(--cinza-texto);
+    }
+    
+    /* ══════════════════════════════════════════════════════════════
+       CTA FINAL
+       ══════════════════════════════════════════════════════════════ */
+    .cta-final {
+      padding: 80px 24px;
+      background: linear-gradient(135deg, var(--azul-hero) 0%, var(--azul-claro) 100%);
       text-align: center;
     }
     
-    .cta h2 {
-      font-size: 2.2rem;
+    .cta-final h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
       font-weight: 800;
-      color: var(--branco);
-      margin-bottom: 15px;
+      color: white;
+      margin-bottom: 16px;
     }
     
-    .cta p {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.8);
-      margin-bottom: 30px;
+    .cta-final p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 32px;
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
     }
     
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
+    .cta-final .btn-primary {
+      background: white;
+      color: var(--azul-hero);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
     }
     
-    .btn-whatsapp {
-      background: var(--verde-wpp);
-      color: var(--branco);
-      padding: 18px 40px;
-      border-radius: var(--radius-btn);
-      font-weight: 700;
-      font-size: 1.1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      transition: all 0.3s ease;
+    .cta-final .btn-primary:hover {
+      background: var(--cinza-bg);
+      transform: translateY(-2px);
     }
     
-    .btn-whatsapp:hover {
-      background: #20bd5a;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    .cta-final .btn-primary svg {
+      fill: var(--verde-wpp);
     }
     
-    .btn-whatsapp svg {
-      width: 24px;
-      height: 24px;
-      fill: currentColor;
+    /* ══════════════════════════════════════════════════════════════
+       FOOTER
+       ══════════════════════════════════════════════════════════════ */
+    footer {
+      background: var(--cinza-texto);
+      padding: 60px 24px 24px;
+      color: rgba(255,255,255,0.7);
     }
     
-    /* FOOTER */
-    .footer {
-      background: var(--primaria);
-      padding: 60px 0 30px;
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
     }
     
     .footer-grid {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 40px;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 24px;
     }
     
     .footer-brand h3 {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--branco);
-      margin-bottom: 15px;
-    }
-    
-    .footer-brand p {
-      color: rgba(255,255,255,0.7);
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-    
-    .footer-title {
-      font-size: 1rem;
+      font-size: 20px;
       font-weight: 700;
-      color: var(--branco);
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    
-    .footer-links {
-      list-style: none;
-    }
-    
-    .footer-links li {
+      color: white;
       margin-bottom: 12px;
     }
     
-    .footer-links a {
-      color: rgba(255,255,255,0.7);
-      transition: color 0.3s ease;
+    .footer-brand p {
+      font-size: 14px;
+      line-height: 1.7;
     }
     
-    .footer-links a:hover {
-      color: var(--secundaria);
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
     
-    .footer-contact p {
-      color: rgba(255,255,255,0.7);
-      margin-bottom: 10px;
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
+    .footer-col a {
+      display: block;
+      font-size: 14px;
+      padding: 6px 0;
+      transition: color 0.2s;
     }
     
-    .footer-contact svg {
-      width: 18px;
-      height: 18px;
-      fill: var(--secundaria);
-      flex-shrink: 0;
-      margin-top: 3px;
+    .footer-col a:hover {
+      color: white;
     }
     
     .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 30px;
-      text-align: center;
-      color: rgba(255,255,255,0.5);
-      font-size: 0.9rem;
-    }
-    
-    /* WHATSAPP FLUTUANTE */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      z-index: 9999;
-    }
-    
-    .whatsapp-float a {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
+      font-size: 13px;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════
+       FLOAT WHATSAPP
+       ══════════════════════════════════════════════════════════════ */
+    .float-wpp {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
       width: 60px;
       height: 60px;
       background: var(--verde-wpp);
       border-radius: 50%;
-      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
-      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      z-index: 999;
+      transition: all 0.3s;
     }
     
-    .whatsapp-float a:hover {
+    .float-wpp:hover {
       transform: scale(1.1);
-      box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+      box-shadow: 0 6px 24px rgba(37,211,102,0.5);
     }
     
-    .whatsapp-float svg {
+    .float-wpp svg {
       width: 32px;
       height: 32px;
-      fill: var(--branco);
+      fill: white;
     }
     
-    /* RESPONSIVO */
-    @media (max-width: 1024px) {
-      .hero-content {
+    /* ══════════════════════════════════════════════════════════════
+       MOBILE MENU
+       ══════════════════════════════════════════════════════════════ */
+    .mobile-menu {
+      display: none;
+      background: var(--branco);
+      border-top: 1px solid var(--borda);
+      padding: 16px 24px;
+    }
+    
+    .mobile-menu.open {
+      display: block;
+    }
+    
+    .mobile-menu a {
+      display: block;
+      padding: 12px 0;
+      font-weight: 500;
+      color: var(--cinza-texto);
+      border-bottom: 1px solid var(--borda);
+    }
+    
+    /* ══════════════════════════════════════════════════════════════
+       RESPONSIVO
+       ══════════════════════════════════════════════════════════════ */
+    @media (max-width: 968px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .header-phone { display: none; }
+      
+      .hero-inner {
         grid-template-columns: 1fr;
         text-align: center;
       }
       
-      .hero h1 {
-        font-size: 2.2rem;
-      }
+      .hero-btns { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-visual { order: -1; margin-bottom: 32px; }
+      .hero-img-wrapper { padding: 24px; }
+      .hero-img-wrapper img { height: 200px; }
       
-      .hero-buttons {
-        justify-content: center;
-      }
-      
-      .hero-image {
-        order: -1;
-        margin-bottom: 30px;
-      }
-      
-      .hero-image img {
-        max-height: 250px;
-      }
-      
-      .beneficios-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      
-      .segmentos-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .passos-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      
-      .passos-grid::before {
-        display: none;
-      }
+      .beneficios-grid { grid-template-columns: 1fr; }
+      .produtos-grid { grid-template-columns: 1fr; }
+      .passos-grid { grid-template-columns: 1fr; }
+      .passo:not(:last-child)::after { display: none; }
       
       .footer-grid {
         grid-template-columns: 1fr;
         text-align: center;
       }
+      
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
     }
     
-    @media (max-width: 768px) {
-      .header-inner {
+    @media (max-width: 600px) {
+      .hero { padding: 40px 16px 60px; }
+      .hero-badge { font-size: 12px; }
+      
+      .btn-primary, .btn-secondary {
+        padding: 14px 24px;
+        font-size: 15px;
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .hero-btns {
         flex-direction: column;
-        gap: 15px;
-      }
-      
-      .header-contact {
-        flex-direction: column;
-        gap: 10px;
-      }
-      
-      .hero {
-        padding: 50px 0;
-      }
-      
-      .hero h1 {
-        font-size: 1.8rem;
       }
       
       .hero-stats {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        flex-direction: column;
+        gap: 16px;
       }
       
-      .beneficios-grid,
-      .passos-grid {
-        grid-template-columns: 1fr;
-      }
+      .stat-item { text-align: center; }
       
-      .section-title {
-        font-size: 1.8rem;
-      }
-      
-      .cta h2 {
-        font-size: 1.6rem;
+      .float-wpp {
+        bottom: 16px;
+        right: 16px;
+        width: 54px;
+        height: 54px;
       }
     }
   </style>
-  
-  <!-- Schema.org LocalBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Gás P20 Empilhadeira",
-    "description": "Fornecimento de gás GLP P20 para empilhadeiras em Campo Grande MS. Entrega programada para empresas com contrato de fornecimento.",
-    "image": "https://gasp20empilhadeira.com.br/images/logo.webp",
-    "telephone": "+55-67-99131-0665",
-    "email": "contato@gasp20empilhadeira.com.br",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua Olímpio Klafke, 635",
-      "addressLocality": "Campo Grande",
-      "addressRegion": "MS",
-      "postalCode": "79044-280",
-      "addressCountry": "BR",
-      "neighborhood": "Mata do Jacinto"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -20.4697,
-      "longitude": -54.6201
-    },
-    "url": "https://gasp20empilhadeira.com.br",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "07:00",
-        "closes": "18:30"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "07:00",
-        "closes": "18:30"
-      }
-    ],
-    "priceRange": "$$",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "150"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": "Campo Grande",
-      "addressRegion": "MS"
-    }
-  }
-  </script>
-  
-  <!-- Schema.org FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Qual o preço do gás P20 para empilhadeira?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "O preço do gás P20 para empilhadeira varia conforme o volume de consumo e tipo de contrato. Empresas com consumo recorrente têm condições especiais. Entre em contato pelo WhatsApp (67) 99131-0665 para um orçamento personalizado."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Vocês fazem contrato de fornecimento?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim! Oferecemos contratos de fornecimento contínuo com condições especiais de preço e entrega programada. Ideal para empresas que precisam de abastecimento regular sem preocupações."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Qual a autonomia do P20 em uma empilhadeira?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A autonomia média de um cilindro P20 (20kg) em uma empilhadeira GLP é de 6 a 8 horas de operação contínua, podendo variar conforme o modelo da empilhadeira e intensidade de uso."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Atendem empresas de todos os tamanhos?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim! Atendemos desde pequenas empresas com uma empilhadeira até grandes centros de distribuição com frotas extensas. Nosso atendimento é personalizado para cada necessidade."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Como funciona a troca do cilindro?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Trabalhamos no sistema de comodato. Você recebe cilindros cheios e devolve os vazios. Nossa equipe faz a entrega e recolhimento, garantindo agilidade e segurança na operação."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "O gás é certificado pela ANP?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim! Todo nosso GLP é certificado pela ANP (Agência Nacional do Petróleo), garantindo qualidade, segurança e conformidade com todas as normas regulamentadoras."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Fazem entrega programada/recorrente?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim! Oferecemos entregas programadas semanais, quinzenais ou conforme a necessidade da sua empresa. Você nunca fica sem gás para suas empilhadeiras."
-        }
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
-  
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="/" class="logo">
-          <img src="/images/logo.webp" alt="Gás P20 Empilhadeira" class="logo-img">
-        </a>
-        <div class="header-contact">
-          <a href="tel:+5567991310665" class="header-phone">
-            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-            (67) 99131-0665
-          </a>
-          <a href="https://wa.me/5567991310665?text=Ol%C3%A1%21%20Preciso%20de%20g%C3%A1s%20P20%20para%20empilhadeira." class="btn-header" target="_blank" rel="noopener">
-            Solicitar Orçamento
-          </a>
-        </div>
-      </div>
-    </div>
-  </header>
-  
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <div class="hero-badge">
-            🏭 Atendimento para empresas
-          </div>
-          <h1>Gás de <span>Empilhadeira</span> em Campo Grande</h1>
-          <p class="hero-subtitle">Abastecimento de GLP P20 para empilhadeiras. Entrega rápida, contrato de fornecimento e preço competitivo para sua empresa.</p>
-          <div class="hero-buttons">
-            <a href="https://wa.me/5567991310665?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento%20de%20g%C3%A1s%20P20%20para%20empilhadeira." class="btn-primary" target="_blank" rel="noopener">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Solicitar Orçamento
-            </a>
-            <a href="tel:+5567991310665" class="btn-secondary">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-              Ligar Agora
-            </a>
-          </div>
-          <div class="hero-stats">
-            <div class="stat-item">
-              <div class="stat-number">50+</div>
-              <div class="stat-label">Empresas Atendidas</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">4.9★</div>
-              <div class="stat-label">Avaliação Google</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">10+</div>
-              <div class="stat-label">Anos de Experiência</div>
-            </div>
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="/images/cilindro-p20.webp" alt="Cilindro P20 para empilhadeira GLP" width="300" height="400" loading="eager" style="max-height: 400px; width: auto; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));">
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- BENEFÍCIOS -->
-  <section class="beneficios">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Vantagens</span>
-        <h2 class="section-title">Por que escolher nosso serviço?</h2>
-        <p class="section-subtitle">Atendimento especializado para empresas que dependem de empilhadeiras GLP</p>
-      </div>
-      <div class="beneficios-grid">
-        <div class="beneficio-card">
-          <div class="beneficio-icon">
-            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-          </div>
-          <h3>Entrega Programada</h3>
-          <p>Cronograma de entregas conforme a demanda da sua operação. Nunca fique sem gás.</p>
-        </div>
-        <div class="beneficio-card">
-          <div class="beneficio-icon">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-          </div>
-          <h3>Contrato de Fornecimento</h3>
-          <p>Condições especiais de preço e prioridade no atendimento com contrato empresarial.</p>
-        </div>
-        <div class="beneficio-card">
-          <div class="beneficio-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-          </div>
-          <h3>Certificação ANP</h3>
-          <p>GLP com certificação da Agência Nacional do Petróleo. Qualidade e segurança garantidas.</p>
-        </div>
-        <div class="beneficio-card">
-          <div class="beneficio-icon">
-            <svg viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-          </div>
-          <h3>Atendimento Técnico</h3>
-          <p>Suporte especializado para sistemas de GLP em empilhadeiras. Orientação e assistência.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- SEGMENTOS -->
-  <section class="segmentos">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Segmentos</span>
-        <h2 class="section-title">Quem atendemos</h2>
-        <p class="section-subtitle">Soluções em gás P20 para diversos setores industriais e logísticos</p>
-      </div>
-      <div class="segmentos-grid">
-        <div class="segmento-card">
-          <div class="segmento-icon">🏭</div>
-          <h3>Indústrias</h3>
-          <p>Abastecimento para linhas de produção com empilhadeiras GLP. Entrega em horário comercial ou programado.</p>
-        </div>
-        <div class="segmento-card">
-          <div class="segmento-icon">📦</div>
-          <h3>Centros de Distribuição</h3>
-          <p>Fornecimento contínuo para operações logísticas de alta demanda. Contratos especiais para grandes volumes.</p>
-        </div>
-        <div class="segmento-card">
-          <div class="segmento-icon">🏪</div>
-          <h3>Armazéns e Atacados</h3>
-          <p>Gás P20 para movimentação de mercadorias. Atendimento rápido para não parar sua operação.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- COMO FUNCIONA -->
-  <section class="como-funciona">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Processo</span>
-        <h2 class="section-title">Como funciona</h2>
-        <p class="section-subtitle">Do orçamento à entrega em 4 passos simples</p>
-      </div>
-      <div class="passos-grid">
-        <div class="passo">
-          <div class="passo-numero">1</div>
-          <h3>Solicite Orçamento</h3>
-          <p>Entre em contato via WhatsApp ou telefone informando sua demanda.</p>
-        </div>
-        <div class="passo">
-          <div class="passo-numero">2</div>
-          <h3>Receba Proposta</h3>
-          <p>Enviamos proposta personalizada com preços e condições de contrato.</p>
-        </div>
-        <div class="passo">
-          <div class="passo-numero">3</div>
-          <h3>Agende Entrega</h3>
-          <p>Definimos cronograma de entregas conforme sua necessidade operacional.</p>
-        </div>
-        <div class="passo">
-          <div class="passo-numero">4</div>
-          <h3>Receba o Gás</h3>
-          <p>Entregamos cilindros P20 cheios e recolhemos os vazios. Simples assim!</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- FAQ -->
-  <section class="faq">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Dúvidas</span>
-        <h2 class="section-title">Perguntas Frequentes</h2>
-        <p class="section-subtitle">Tire suas dúvidas sobre gás P20 para empilhadeiras</p>
-      </div>
-      <div class="faq-container">
-        <div class="faq-item">
-          <button class="faq-question">
-            Qual o preço do gás P20 para empilhadeira?
-            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>O preço do gás P20 para empilhadeira varia conforme o volume de consumo e tipo de contrato. Empresas com consumo recorrente têm condições especiais. Entre em contato pelo WhatsApp (67) 99131-0665 para um orçamento personalizado.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            Vocês fazem contrato de fornecimento?
-            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Sim! Oferecemos contratos de fornecimento contínuo com condições especiais de preço e entrega programada. Ideal para empresas que precisam de abastecimento regular sem preocupações.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            Qual a autonomia do P20 em uma empilhadeira?
-            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>A autonomia média de um cilindro P20 (20kg) em uma empilhadeira GLP é de 6 a 8 horas de operação contínua, podendo variar conforme o modelo da empilhadeira e intensidade de uso.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            Atendem empresas de todos os tamanhos?
-            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Sim! Atendemos desde pequenas empresas com uma empilhadeira até grandes centros de distribuição com frotas extensas. Nosso atendimento é personalizado para cada necessidade.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            Como funciona a troca do cilindro?
-            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Trabalhamos no sistema de comodato. Você recebe cilindros cheios e devolve os vazios. Nossa equipe faz a entrega e recolhimento, garantindo agilidade e segurança na operação.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            O gás é certificado pela ANP?
-            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Sim! Todo nosso GLP é certificado pela ANP (Agência Nacional do Petróleo), garantindo qualidade, segurança e conformidade com todas as normas regulamentadoras.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            Fazem entrega programada/recorrente?
-            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Sim! Oferecemos entregas programadas semanais, quinzenais ou conforme a necessidade da sua empresa. Você nunca fica sem gás para suas empilhadeiras.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- CTA -->
-  <section class="cta">
-    <div class="container">
-      <h2>Precisa de Gás P20 para sua Empilhadeira?</h2>
-      <p>Solicite um orçamento agora mesmo e garanta o abastecimento contínuo para sua operação.</p>
-      <div class="cta-buttons">
-        <a href="https://wa.me/5567991310665?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento%20de%20g%C3%A1s%20P20%20para%20empilhadeira." class="btn-whatsapp" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Falar no WhatsApp
-        </a>
-      </div>
-    </div>
-  </section>
-  
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3>Gás P20 Empilhadeira</h3>
-          <p>Fornecimento de GLP para empilhadeiras em Campo Grande/MS. Entrega rápida, contrato empresarial e atendimento especializado para sua operação.</p>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-title">Links Rápidos</h4>
-          <ul class="footer-links">
-            <li><a href="/">Início</a></li>
-            <li><a href="/gas-p20-empilhadeira/">Gás P20</a></li>
-            <li><a href="/empresas/">Empresas Atendidas</a></li>
-            <li><a href="/como-funciona/">Como Funciona</a></li>
-            <li><a href="/contato/">Contato</a></li>
-          </ul>
-        </div>
-        <div class="footer-col footer-contact">
-          <h4 class="footer-title">Contato</h4>
-          <p>
-            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-            (67) 99131-0665
-          </p>
-          <p>
-            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            Rua Olímpio Klafke, 635<br>Mata do Jacinto - Campo Grande/MS
-          </p>
-          <p>
-            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-            Seg–Sáb: 7h às 18h30
-          </p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 Gás P20 Empilhadeira — Campo Grande/MS. Todos os direitos reservados.</p>
-      </div>
-    </div>
-  </footer>
-  
-  <!-- WHATSAPP FLUTUANTE -->
-  <div class="whatsapp-float">
-    <a href="https://wa.me/5567991310665?text=Ol%C3%A1%21%20Preciso%20de%20g%C3%A1s%20P20%20para%20empilhadeira." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/images/logo.png" alt="Gás P20 Empilhadeira - GLP para Empilhadeiras em Campo Grande" height="50">
     </a>
+    
+    <nav>
+      <a href="/">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#como-funciona">Como Funciona</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="https://wa.me/5567991310665?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20or%C3%A7amento%20de%20g%C3%A1s%20P20%20para%20empilhadeira." target="_blank" rel="noopener" class="nav-cta">Solicitar Orçamento</a>
+    </nav>
+    
+    <a href="tel:5567991310665" class="header-phone">
+      <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      (67) 99131-0665
+    </a>
+    
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
   
-  <!-- FAQ SCRIPT -->
-  <script>
-    document.querySelectorAll('.faq-question').forEach(button => {
-      button.addEventListener('click', () => {
-        const item = button.parentElement;
-        const isActive = item.classList.contains('active');
-        
-        // Fecha todos
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-        
-        // Abre o clicado se não estava ativo
-        if (!isActive) {
-          item.classList.add('active');
-        }
-      });
-    });
-  </script>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/">Início</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#como-funciona">Como Funciona</a>
+    <a href="#faq">Dúvidas</a>
+    <a href="tel:5567991310665">📞 (67) 99131-0665</a>
+    <a href="https://wa.me/5567991310665" target="_blank" rel="noopener">💬 WhatsApp</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        Atendimento para empresas
+      </div>
+      
+      <h1>Gás de <span>Empilhadeira</span> em Campo Grande</h1>
+      
+      <p class="hero-desc">
+        Abastecimento de GLP P20 para empilhadeiras. Entrega rápida, contrato de fornecimento e preço competitivo para sua empresa.
+      </p>
+      
+      <div class="hero-btns">
+        <a href="https://wa.me/5567991310665?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20or%C3%A7amento%20de%20g%C3%A1s%20P20%20para%20empilhadeira." target="_blank" rel="noopener" class="btn-primary">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+          Solicitar Orçamento
+        </a>
+        <a href="tel:5567991310665" class="btn-secondary">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          Ligar Agora
+        </a>
+      </div>
+      
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">50<span>+</span></div>
+          <div class="stat-label">Empresas Atendidas</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4.9<span>★</span></div>
+          <div class="stat-label">Avaliação Google</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">10<span>+</span></div>
+          <div class="stat-label">Anos de Experiência</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-visual">
+      <div class="hero-img-wrapper">
+        <img src="https://gasdecozinhacampogrande.com.br/botijao-p20.png" alt="Cilindro P20 para empilhadeira GLP Campo Grande" loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section class="beneficios">
+  <div class="section-header">
+    <h2 class="section-title">Por que escolher a Gás P20 Empilhadeira?</h2>
+    <p class="section-sub">Fornecimento especializado de GLP para empilhadeiras em Campo Grande</p>
+  </div>
   
-</body>
-</html>
+  <div class="beneficios-grid">
+    <div class="beneficio-card">
+      <div class="beneficio-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zm-.5 1.5l1.96 2.5H17V9.5h2.5zM6 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm12 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+      </div>
+      <h3>Entrega Rápida</h3>
+      <p>Entrega expressa para não parar sua operação. Atendemos toda Campo Grande.</p>
+    </div>
+    
+    <div class="beneficio-card">
+      <div class="beneficio-icon">
+        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm3-6c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z"/></svg>
+      </div>
+      <h3>Contrato Empresarial</h3>
+      <p>Planos de fornecimento contínuo com preços fixos e entrega programada.</p>
+    </div>
+    
+    <div class="beneficio-card">
+      <div class="beneficio-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+      </div>
+      <h3>Gás Certificado ANP</h3>
+      <p>GLP de qualidade, certificado pela ANP. Segurança garantida para suas empilhadeiras.</p>
+    </div>
+    
+    <div class="beneficio-card">
+      <div class="beneficio-icon">
+        <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+      </div>
+      <h3>Preço Competitivo</h3>
+      <p>Melhor custo-benefício da região. Consulte nossos preços especiais para empresas.</p>
+    </div>
+    
+    <div class="beneficio-card">
+      <div class="beneficio-icon">
+        <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+      </div>
+      <h3>Atendimento Ágil</h3>
+      <p>Segunda a sábado das 7h às 18h30. Respondemos em minutos pelo WhatsApp.</p>
+    </div>
+    
+    <div class="beneficio-card">
+      <div class="beneficio-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+      </div>
+      <h3>Todos os Segmentos</h3>
+      <p>Armazéns, indústrias, centros de distribuição, atacadistas e mais.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="produtos" id="produtos">
+  <div class="section-header">
+    <h2 class="section-title">Nossos Produtos</h2>
+    <p class="section-sub">Cilindros de GLP para empilhadeiras e uso industrial</p>
+  </div>
+  
+  <div class="produtos-grid">
+    <div class="produto-card destaque">
+      <img src="https://gasdecozinhacampogrande.com.br/botijao-p20.png" alt="Cilindro P20 GLP para empilhadeira" class="produto-img">
+      <h3>Gás P20 Industrial</h3>
+      <p class="desc">Ideal para empilhadeiras a GLP. 20kg de gás com maior autonomia.</p>
+      <div class="produto-specs">
+        <span class="spec">20 kg</span>
+        <span class="spec">GLP</span>
+        <span class="spec">Empilhadeiras</span>
+      </div>
+      <a href="https://wa.me/5567991310665?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20do%20G%C3%A1s%20P20%20para%20empilhadeira." target="_blank" rel="noopener" class="btn-primary">
+        Solicitar Orçamento
+      </a>
+    </div>
+    
+    <div class="produto-card">
+      <img src="https://gasdecozinhacampogrande.com.br/botijao-p45.jpg" alt="Cilindro P45 GLP industrial" class="produto-img">
+      <h3>Gás P45 Industrial</h3>
+      <p class="desc">Para grandes demandas. 45kg de gás para indústrias e frotistas.</p>
+      <div class="produto-specs">
+        <span class="spec">45 kg</span>
+        <span class="spec">GLP</span>
+        <span class="spec">Indústrias</span>
+      </div>
+      <a href="https://wa.me/5567991310665?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20do%20G%C3%A1s%20P45%20industrial." target="_blank" rel="noopener" class="btn-primary">
+        Solicitar Orçamento
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="como-funciona" id="como-funciona">
+  <div class="section-header">
+    <h2 class="section-title">Como Funciona</h2>
+    <p class="section-sub">3 passos simples para abastecer suas empilhadeiras</p>
+  </div>
+  
+  <div class="passos-grid">
+    <div class="passo">
+      <div class="passo-num">1</div>
+      <h3>Entre em Contato</h3>
+      <p>Solicite orçamento pelo WhatsApp ou ligue para (67) 99131-0665</p>
+    </div>
+    
+    <div class="passo">
+      <div class="passo-num">2</div>
+      <h3>Informe sua Demanda</h3>
+      <p>Quantidade de cilindros, frequência de entrega e endereço</p>
+    </div>
+    
+    <div class="passo">
+      <div class="passo-num">3</div>
+      <h3>Receba na Empresa</h3>
+      <p>Entregamos no local combinado com agilidade e segurança</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="section-header">
+    <h2 class="section-title">Dúvidas Frequentes</h2>
+    <p class="section-sub">Tire suas dúvidas sobre gás para empilhadeiras</p>
+  </div>
+  
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-btn">Qual o preço do gás P20 para empilhadeira?</button>
+      <div class="faq-content">
+        <p>O preço do cilindro P20 varia conforme a quantidade e frequência de pedidos. <strong>Solicite um orçamento personalizado</strong> pelo WhatsApp (67) 99131-0665 e garanta condições especiais para sua empresa.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-btn">Vocês fazem contrato de fornecimento?</button>
+      <div class="faq-content">
+        <p>Sim! Oferecemos <strong>contratos de fornecimento contínuo</strong> com preços fixos, entrega programada e prioridade no atendimento. Ideal para empresas com demanda regular.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-btn">Qual a autonomia do P20 em uma empilhadeira?</button>
+      <div class="faq-content">
+        <p>A autonomia varia conforme o modelo da empilhadeira e intensidade de uso. Em média, um cilindro P20 dura de <strong>6 a 10 horas de operação contínua</strong>. Consulte-nos para uma avaliação específica.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-btn">Atendem empresas de todos os tamanhos?</button>
+      <div class="faq-content">
+        <p>Sim! Atendemos desde <strong>pequenas empresas com 1 empilhadeira</strong> até grandes operações logísticas com frotas completas. Cada cliente recebe atenção personalizada.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-btn">Como funciona a troca do cilindro?</button>
+      <div class="faq-content">
+        <p>Trabalhamos com o sistema de <strong>troca de cilindros</strong>. Levamos cilindros cheios e recolhemos os vazios. Simples, rápido e sem burocracia.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-btn">O gás é certificado pela ANP?</button>
+      <div class="faq-content">
+        <p>Sim! Todo nosso GLP é <strong>certificado pela ANP</strong> (Agência Nacional do Petróleo), garantindo qualidade, segurança e procedência para suas empilhadeiras.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-btn">Fazem entrega programada/recorrente?</button>
+      <div class="faq-content">
+        <p>Sim! Oferecemos <strong>entregas programadas</strong> semanais, quinzenais ou mensais. Você define a frequência e nós garantimos que sua empresa nunca fique sem gás.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <h2>Precisa de Gás para Empilhadeiras?</h2>
+  <p>Solicite um orçamento agora e receba atendimento personalizado para sua empresa.</p>
+  <a href="https://wa.me/5567991310665?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20or%C3%A7amento%20de%20g%C3%A1s%20P20%20para%20empilhadeira." target="_blank" rel="noopener" class="btn-primary">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+    Solicitar Orçamento pelo WhatsApp
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Gás P20 Empilhadeira</h3>
+        <p>Especialistas em abastecimento de GLP para empilhadeiras em Campo Grande/MS. Entrega rápida, preço justo e atendimento personalizado para sua empresa.</p>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <a href="tel:5567991310665">📞 (67) 99131-0665</a>
+        <a href="https://wa.me/5567991310665" target="_blank">💬 WhatsApp</a>
+        <a href="/cdn-cgi/l/email-protection#34575b5a4055405b745355474406045159445d585c5550515d46551a575b591a5646">📧 E-mail</a>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Endereço</h4>
+        <a>Rua Olímpio Klafke, 635</a>
+        <a>Mata do Jacinto</a>
+        <a>Campo Grande - MS</a>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Horário</h4>
+        <a>Segunda a Sábado</a>
+        <a>7h às 18h30</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <span>© 2026 Gás P20 Empilhadeira. Todos os direitos reservados.</span>
+      <span>Gás de Empilhadeira em Campo Grande - MS</span>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOAT WHATSAPP -->
+<a class="float-wpp" href="https://wa.me/5567991310665?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20or%C3%A7amento%20de%20g%C3%A1s%20P20%20para%20empilhadeira." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.107.548 4.086 1.508 5.806L0 24l6.362-1.481A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.653-.518-5.16-1.419l-.37-.22-3.777.88.898-3.678-.242-.378A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<!-- SCRIPTS -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // FAQ Accordion
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+  
+  // Mobile Menu
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+</script>
+
+<!-- SCHEMA.ORG -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Gás P20 Empilhadeira",
+      "description": "Abastecimento de GLP P20 para empilhadeiras em Campo Grande MS",
+      "url": "https://gasp20empilhadeira.com.br/",
+      "telephone": "+5567991310665",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Olímpio Klafke, 635",
+        "addressLocality": "Campo Grande",
+        "addressRegion": "MS",
+        "postalCode": "79010-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -20.4697,
+        "longitude": -54.6201
+      },
+      "openingHours": "Mo-Sa 07:00-18:30",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "150"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qual o preço do gás P20 para empilhadeira?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O preço do cilindro P20 varia conforme a quantidade e frequência de pedidos. Solicite um orçamento personalizado pelo WhatsApp (67) 99131-0665."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês fazem contrato de fornecimento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Oferecemos contratos de fornecimento contínuo com preços fixos, entrega programada e prioridade no atendimento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O gás é certificado pela ANP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Todo nosso GLP

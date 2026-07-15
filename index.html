@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  index.html | Versão: 2.5.0 | Atualizado: 2026-03-29 | Nova imagem empilhadeira amarela na seção sobre
+  index.html | Versão: 2.6.0 | Atualizado: 2026-07-15 | Fix schema truncado + OG image
 -->
 <html lang="pt-BR">
 <head>
@@ -11,6 +11,7 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://gasp20empilhadeira.com.br/">
   
+  <meta property="og:image" content="https://gasp20empilhadeira.com.br/images/empilhadeira.webp">
   <meta property="og:title" content="Gás de Empilhadeira em Campo Grande MS">
   <meta property="og:description" content="Abastecimento de GLP P20 para empilhadeiras. Entrega rápida e contrato empresarial.">
   <meta property="og:url" content="https://gasp20empilhadeira.com.br/">
@@ -939,7 +940,7 @@
 <header>
   <div class="header-inner">
     <a href="/" class="logo">
-      <img src="/images/logo.png" alt="Gás P20 Empilhadeira - GLP para Empilhadeiras em Campo Grande" height="50">
+      <img src="/images/logo.webp" alt="Gás P20 Empilhadeira - GLP para Empilhadeiras em Campo Grande" height="50">
     </a>
     
     <nav>
@@ -1025,7 +1026,7 @@
 <section class="sobre">
   <div class="sobre-inner">
     <div class="sobre-img">
-      <img src="/images/empilhadeira.jpg" alt="Empilhadeira a GLP com cilindro P20" loading="lazy">
+      <img src="/images/empilhadeira.webp" alt="Empilhadeira a GLP com cilindro P20" loading="lazy">
     </div>
     
     <div class="sobre-content">
@@ -1332,6 +1333,7 @@
       "@type": "LocalBusiness",
       "name": "Gás P20 Empilhadeira",
       "description": "Abastecimento de GLP P20 para empilhadeiras em Campo Grande MS",
+      "image": "https://gasp20empilhadeira.com.br/images/empilhadeira.webp",
       "url": "https://gasp20empilhadeira.com.br/",
       "telephone": "+5567991310665",
       "address": {
@@ -1347,12 +1349,24 @@
         "latitude": -20.4697,
         "longitude": -54.6201
       },
-      "openingHours": "Mo-Sa 07:00-18:30",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150"
-      }
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "07:00",
+        "closes": "18:30"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Campo Grande"
+      },
+      "priceRange": "$$"
     },
     {
       "@type": "FAQPage",
@@ -1362,7 +1376,7 @@
           "name": "Qual o preço do gás P20 para empilhadeira?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "O preço do cilindro P20 varia conforme a quantidade e frequência de pedidos. Solicite um orçamento personalizado pelo WhatsApp (67) 99131-0665."
+            "text": "O preço do cilindro P20 varia conforme a quantidade e frequência de pedidos. Solicite um orçamento personalizado pelo WhatsApp (67) 99131-0665 e garanta condições especiais para sua empresa."
           }
         },
         {
@@ -1370,7 +1384,31 @@
           "name": "Vocês fazem contrato de fornecimento?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim! Oferecemos contratos de fornecimento contínuo com preços fixos, entrega programada e prioridade no atendimento."
+            "text": "Sim! Oferecemos contratos de fornecimento contínuo com preços fixos, entrega programada e prioridade no atendimento. Ideal para empresas com demanda regular."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a autonomia do P20 em uma empilhadeira?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A autonomia varia conforme o modelo da empilhadeira e intensidade de uso. Em média, um cilindro P20 dura de 6 a 10 horas de operação contínua. Consulte-nos para uma avaliação específica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Atendem empresas de todos os tamanhos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Atendemos desde pequenas empresas com 1 empilhadeira até grandes operações logísticas com frotas completas. Cada cliente recebe atenção personalizada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona a troca do cilindro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trabalhamos com o sistema de troca de cilindros. Levamos cilindros cheios e recolhemos os vazios. Simples, rápido e sem burocracia."
           }
         },
         {
@@ -1378,4 +1416,22 @@
           "name": "O gás é certificado pela ANP?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim! Todo nosso GLP
+            "text": "Sim! Todo nosso GLP é certificado pela ANP (Agência Nacional do Petróleo), garantindo qualidade, segurança e procedência para suas empilhadeiras."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Fazem entrega programada/recorrente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Oferecemos entregas programadas semanais, quinzenais ou mensais. Você define a frequência e nós garantimos que sua empresa nunca fique sem gás."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</body>
+</html>

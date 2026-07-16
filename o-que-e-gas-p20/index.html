@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  o-que-e-gas-p20/index.html | Versão: 1.0.1 | Atualizado: 2026-07-15 | Título SEO ≤60 caracteres
+  o-que-e-gas-p20/index.html | Versão: 1.1.0 | Atualizado: 2026-07-16 | FAQ 5 perguntas + schema (rich result)
 -->
 <html lang="pt-BR">
 <head>
@@ -51,6 +51,13 @@
     .float-wpp{position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:var(--verde-wpp);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:99}
     .float-wpp svg{width:32px;height:32px;fill:white}
     @media(max-width:968px){nav{display:none}.hamburger{display:flex}.info-grid{grid-template-columns:1fr}}
+    .faq-section{padding:60px 24px;background:var(--cinza-bg)}
+    .faq-item{background:var(--branco);border-radius:var(--radius);margin-bottom:16px;overflow:hidden}
+    .faq-question{padding:20px 24px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+    .faq-question::after{content:'+';font-size:24px;color:var(--azul-hero)}
+    .faq-item.open .faq-question::after{content:'−'}
+    .faq-answer{max-height:0;overflow:hidden;transition:0.3s;padding:0 24px;color:var(--cinza-sub)}
+    .faq-item.open .faq-answer{max-height:400px;padding:0 24px 20px}
   </style>
 </head>
 <body>
@@ -158,6 +165,38 @@
   </a>
 </section>
 
+
+<section class="faq-section">
+  <div class="container">
+    <h2 style="text-align:center;margin-bottom:32px">Perguntas Frequentes sobre o Gás P20</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">P20 é a mesma coisa que GLP?</div>
+      <div class="faq-answer">O P20 é um cilindro de 20 kg de GLP (Gás Liquefeito de Petróleo). O GLP é o combustível; o P20 é o vasilhame específico usado em empilhadeiras.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Qual a diferença do P20 para o P13?</div>
+      <div class="faq-answer">O P13 é o botijão doméstico de 13 kg, usado na vertical. O P20 tem 20 kg, válvula própria e opera na horizontal, encaixado no suporte da empilhadeira.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Para que serve o cilindro P20?</div>
+      <div class="faq-answer">O P20 abastece empilhadeiras e equipamentos industriais movidos a GLP, com autonomia e troca rápida em operações de armazém, indústria e logística.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">O P20 serve em qualquer empilhadeira?</div>
+      <div class="faq-answer">Serve em empilhadeiras projetadas para GLP, com suporte horizontal e kit compatível. Empilhadeiras a diesel ou elétricas não usam P20.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Onde comprar cilindro P20 em Campo Grande?</div>
+      <div class="faq-answer">Você compra e recarrega o P20 em Campo Grande com entrega para empresas pelo WhatsApp (67) 99131-0665, com troca de cilindro e opção de fornecimento contínuo.</div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="footer-inner">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px;text-align:left;margin-bottom:32px;font-size:13px">
@@ -197,6 +236,62 @@
 <a href="https://wa.me/5567991310665" target="_blank" class="float-wpp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
 </a>
+
+
+<script>
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
+});
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "P20 é a mesma coisa que GLP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O P20 é um cilindro de 20 kg de GLP (Gás Liquefeito de Petróleo). O GLP é o combustível; o P20 é o vasilhame específico usado em empilhadeiras."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual a diferença do P20 para o P13?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O P13 é o botijão doméstico de 13 kg, usado na vertical. O P20 tem 20 kg, válvula própria e opera na horizontal, encaixado no suporte da empilhadeira."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Para que serve o cilindro P20?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O P20 abastece empilhadeiras e equipamentos industriais movidos a GLP, com autonomia e troca rápida em operações de armazém, indústria e logística."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O P20 serve em qualquer empilhadeira?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Serve em empilhadeiras projetadas para GLP, com suporte horizontal e kit compatível. Empilhadeiras a diesel ou elétricas não usam P20."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Onde comprar cilindro P20 em Campo Grande?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Você compra e recarrega o P20 em Campo Grande com entrega para empresas pelo WhatsApp (67) 99131-0665, com troca de cilindro e opção de fornecimento contínuo."
+      }
+    }
+  ]
+}
+</script>
 
 </body>
 </html>

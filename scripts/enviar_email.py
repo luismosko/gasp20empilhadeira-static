@@ -6,7 +6,7 @@ key=os.environ.get("RESEND_API_KEY","").strip(); to=os.environ.get("MAIL_TO","")
 title=os.environ.get("POST_TITLE","(sem título)").strip(); url=os.environ.get("POST_URL","").strip()
 if not key or not to: print("email: sem chave — pulando."); sys.exit(0)
 html=f"<p>Post novo publicado:</p><p><a href='{url}'>{title}</a></p><p>Quer mudar algo? Peça no chat.</p>"
-body=json.dumps({"from":"Blog Bot <onboarding@resend.dev>","to":to,"subject":f"✅ Post publicado: {title}","html":html}).encode()
+body=json.dumps({"from":"Blog Bot <blog@moskogas.com.br>","to":to,"subject":f"✅ Post publicado: {title}","html":html}).encode()
 req=urllib.request.Request("https://api.resend.com/emails",data=body,method="POST",headers={"Authorization":f"Bearer {key}","Content-Type":"application/json"})
 try:
     with urllib.request.urlopen(req,timeout=30) as r: print("email enviado:",r.status)

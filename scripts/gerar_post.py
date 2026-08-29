@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-gerar_post.py | v2.1.0 (KIT PORTÁVEL — listagem no layout do site)
+gerar_post.py | v2.2.0 (KIT PORTÁVEL — listagem no layout do site)
 Gerador de posts de blog, config-driven, para qualquer site estático (Cloudflare Pages).
 NÃO tem nada hardcoded do negócio — tudo vem de scripts/site_config.json.
 
@@ -144,7 +144,7 @@ Regras OBRIGATÓRIAS:
 - OBRIGATÓRIO 1 elemento concreto e escaneável: tabela HTML (<table>) OU checklist OU lista numerada.
 - Números sempre comprometidos (dê a faixa concreta, nunca só "varia").
 - FAQ com no mínimo 7 perguntas reais + respostas objetivas.
-- NÃO inclua <h1>, NÃO inclua a FAQ, NÃO inclua CTA no corpo_html (são injetados depois)."""
+- No corpo_html use aspas SIMPLES em atributos HTML (nunca aspas duplas).\n- NÃO inclua <h1>, NÃO inclua a FAQ, NÃO inclua CTA no corpo_html (são injetados depois)."""
     if price:
         regras += f"\n- Se citar preço, use EXATAMENTE: {json.dumps(price, ensure_ascii=False)}."
     fmt = ('Responda SOMENTE com JSON válido (sem markdown): '
@@ -153,22 +153,43 @@ Regras OBRIGATÓRIAS:
     return persona + "\n" + regras + "\n" + fmt
 
 
-def chamar_claude(cfg, tema, price):
+def _extrair_json(txt):
+    """Parse tolerante da resposta do modelo. strict=False aceita quebra de linha
+    literal dentro de string; o fallback conserta aspas duplas de atributo HTML,
+    que sao a causa mais comum de JSON invalido no corpo_html."""
+    txt = re.sub(r"^```(json)?|```$", "", txt, flags=re.M).strip()
+    if "{" in txt and "}" in txt:
+        txt = txt[txt.index("{"):txt.rindex("}") + 1]
+    try:
+        return json.loads(txt, strict=False)
+    except json.JSONDecodeError:
+        # aspas duplas em atributos HTML -> aspas simples (nao toca nas chaves do JSON)
+        fix = re.sub(r'(<[^>]*?)="([^"<>]*?)"', r"\1='\2'", txt)
+        return json.loads(fix, strict=False)
+
+
+def chamar_claude(cfg, tema, price, tentativas=3):
     body = json.dumps({
-        "model": MODEL, "max_tokens": 8000, "system": build_system(cfg, price),
+        "model": MODEL, "max_tokens": 12000, "system": build_system(cfg, price),
         "messages": [{"role": "user", "content":
             f"TEMA: {tema['tema']}\nCATEGORIA: {tema['categoria']}\n"
             f"CIDADE: {cfg['site']['cidade']}\nGere o artigo."}],
     }).encode()
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=body, method="POST",
         headers={"x-api-key": API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"})
-    with urllib.request.urlopen(req, timeout=120) as r:
-        out = json.loads(r.read().decode())
-    txt = "".join(b.get("text", "") for b in out.get("content", []) if b.get("type") == "text").strip()
-    txt = re.sub(r"^```(json)?|```$", "", txt, flags=re.M).strip()
-    if "{" in txt and "}" in txt:
-        txt = txt[txt.index("{"):txt.rindex("}") + 1]
-    return json.loads(txt)
+    ultimo = None
+    for n in range(1, tentativas + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r:
+                out = json.loads(r.read().decode())
+            txt = "".join(b.get("text", "") for b in out.get("content", []) if b.get("type") == "text").strip()
+            if out.get("stop_reason") == "max_tokens":
+                raise ValueError("resposta truncada em max_tokens")
+            return _extrair_json(txt)
+        except (json.JSONDecodeError, ValueError) as e:
+            ultimo = e
+            print(f"  ! tentativa {n}/{tentativas} falhou ({type(e).__name__}: {e}); repetindo", file=sys.stderr)
+    raise SystemExit(f"ERRO: modelo nao devolveu JSON valido em {tentativas} tentativas: {ultimo}")
 
 
 # ─────────────────────────── render ──────────────────────────────────────────

@@ -1,0 +1,31 @@
+name: Testar e-mail (diagnóstico)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enviar e-mail de teste
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          MAIL_TO:        ${{ secrets.MAIL_TO }}
+        run: |
+          python3 - <<'PY'
+          import os, json, urllib.request, urllib.error
+          key = os.environ.get("RESEND_API_KEY", "")
+          to  = os.environ.get("MAIL_TO", "")
+          print("chave presente:", bool(key), "| len:", len(key), "| prefixo:", key[:6])
+          print("destino:", repr(to))
+          body = json.dumps({"from": "Blog Bot <blog@moskogas.com.br>", "to": to,
+                             "subject": "teste diagnostico", "html": "<p>teste</p>"}).encode()
+          req = urllib.request.Request("https://api.resend.com/emails", data=body, method="POST",
+                headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
+          try:
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  print("OK", r.status, r.read().decode())
+          except urllib.error.HTTPError as e:
+              print("HTTP", e.code, e.read().decode())
+          PY

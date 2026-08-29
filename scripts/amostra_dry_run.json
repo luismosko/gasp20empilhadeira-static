@@ -1,0 +1,9 @@
+{
+  "title": "Custo por Hora: Empilhadeira a GLP ou Eletrica em Campo Grande",
+  "meta_description": "Comparativo de custo por hora entre empilhadeira a GLP e eletrica em Campo Grande/MS: energia, cilindro P20, manutencao e produtividade.",
+  "corpo_html": "<p>Amostra de dry-run. Serve apenas para validar o pipeline sem consumir a API.</p><h2>Comparativo</h2><table><tr><th>Item</th><th>GLP</th><th>Eletrica</th></tr><tr><td>Custo/hora</td><td>faixa A</td><td>faixa B</td></tr></table>",
+  "faq": [
+    {"q": "Pergunta de teste 1?", "a": "Resposta de teste."},
+    {"q": "Pergunta de teste 2?", "a": "Resposta de teste."}
+  ]
+}

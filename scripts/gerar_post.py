@@ -273,7 +273,7 @@ def main():
     print(f"site: {cfg['site']['dominio']} | preço: {price or 'n/a'}")
     tema = proximo_tema(cfg)
     if not tema:
-        print("fila vazia."); return
+        raise SystemExit("FILA VAZIA: nenhum tema pendente em scripts/fila_temas.json. Reponha a fila — o blog parou de publicar.")
     print(f"tema: {tema['slug']} [{tema['categoria']}]")
 
     if "--dry-run" in sys.argv:

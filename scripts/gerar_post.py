@@ -267,10 +267,101 @@ def render(cfg, art, slug, cat, price, tpl):
         .replace("{{ARTICLE}}", article).replace("{{SCHEMA}}", schema))
 
 
+
+def salvar_fila(fila):
+    p = os.path.join(ROOT, "scripts", "fila_temas.json")
+    json.dump(fila, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+
+
+# ─────────────────── reabastecimento automático da fila ──────────────────────
+LIMIAR_REFILL = int(os.environ.get("LIMIAR_REFILL", "8"))   # abaixo disso, repõe
+QTD_REFILL    = int(os.environ.get("QTD_REFILL", "15"))     # quantos temas pedir
+
+
+def _slugs_existentes(fila):
+    """Tudo que já existe: posts publicados + temas ainda na fila."""
+    s = {t.get("slug", "") for t in fila}
+    blog = os.path.join(ROOT, "blog")
+    if os.path.isdir(blog):
+        s |= {d for d in os.listdir(blog) if os.path.isdir(os.path.join(blog, d))}
+    return {x for x in s if x}
+
+
+def repor_fila(nicho, categorias, fila, pendentes):
+    """Pede temas novos ao modelo quando a fila está acabando.
+    Retorna a lista de temas aceitos (já gravada em fila_temas.json)."""
+    if not API_KEY or len(pendentes) > LIMIAR_REFILL:
+        return []
+    existentes = _slugs_existentes(fila)
+    amostra = sorted(existentes)
+    print(f"  fila baixa ({len(pendentes)} pendentes) — pedindo {QTD_REFILL} temas novos")
+
+    system = (
+        f"Você planeja a pauta de um blog de SEO local. CONTEXTO DO SITE:\n{nicho}\n\n"
+        f"Proponha exatamente {QTD_REFILL} temas NOVOS de artigo.\n"
+        "REGRAS OBRIGATÓRIAS:\n"
+        "- NÃO repita, nem com outras palavras, nenhum assunto da lista de slugs já publicados.\n"
+        "- Cada tema deve ter intenção de busca própria, para não competir com os artigos existentes.\n"
+        "- Prefira dúvidas concretas de quem já é cliente ou está prestes a comprar.\n"
+        f"- categoria deve ser uma destas: {', '.join(categorias)}\n"
+        "- slug: minúsculo, sem acento, palavras separadas por hífen, no máximo 60 caracteres.\n"
+        "Responda SOMENTE com um array JSON: "
+        '[{"slug":"...","tema":"...","categoria":"..."}]'
+    )
+    body = json.dumps({
+        "model": MODEL, "max_tokens": 3000, "system": system,
+        "messages": [{"role": "user", "content":
+                      "SLUGS JÁ PUBLICADOS (não repetir nenhum assunto):\n" +
+                      "\n".join(amostra)}],
+    }).encode()
+    req = urllib.request.Request(
+        "https://api.anthropic.com/v1/messages", data=body, method="POST",
+        headers={"x-api-key": API_KEY, "anthropic-version": "2023-06-01",
+                 "content-type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=180) as r:
+            out = json.loads(r.read().decode())
+        txt = "".join(b.get("text", "") for b in out.get("content", []) if b.get("type") == "text").strip()
+        txt = re.sub(r"^```(json)?|```$", "", txt, flags=re.M).strip()
+        if "[" in txt and "]" in txt:
+            txt = txt[txt.index("["):txt.rindex("]") + 1]
+        propostos = json.loads(txt, strict=False)
+    except Exception as e:
+        print(f"  ! refill falhou (não é fatal): {type(e).__name__}: {e}", file=sys.stderr)
+        return []
+
+    aceitos, vistos = [], set(existentes)
+    for t in propostos if isinstance(propostos, list) else []:
+        if not isinstance(t, dict):
+            continue
+        slug = str(t.get("slug", "")).strip().lower()
+        tema = str(t.get("tema", "")).strip()
+        cat  = str(t.get("categoria", "")).strip().lower()
+        if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+){1,12}", slug) or len(slug) > 60:
+            continue
+        if slug in vistos or not tema or cat not in categorias:
+            continue
+        vistos.add(slug)
+        aceitos.append({"slug": slug, "tema": tema, "categoria": cat})
+
+    if not aceitos:
+        print("  ! refill não produziu tema válido", file=sys.stderr)
+        return []
+    salvar_fila(fila + aceitos)
+    print(f"  fila reposta: +{len(aceitos)} temas (descartados {len(propostos) - len(aceitos)})")
+    for t in aceitos:
+        print(f"     · {t['slug']} [{t['categoria']}]")
+    return aceitos
+
+
 def main():
     cfg = load("site_config.json")
     price = get_price(cfg)
     print(f"site: {cfg['site']['dominio']} | preço: {price or 'n/a'}")
+    fila = load("fila_temas.json")
+    pend = [t for t in fila if not os.path.isdir(os.path.join(ROOT, "blog", t["slug"]))]
+    cats = sorted({t["categoria"] for t in fila})
+    repor_fila(cfg.get("persona", cfg["site"]["nome"]), cats, fila, pend)
     tema = proximo_tema(cfg)
     if not tema:
         raise SystemExit("FILA VAZIA: nenhum tema pendente em scripts/fila_temas.json. Reponha a fila — o blog parou de publicar.")
